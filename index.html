@@ -36,11 +36,22 @@ a { color: #ddf; }
     </style>
   </head>
   <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=236983706410158";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
   <div id="desc">
     <img src="logo-trans.png" width="250" id="logo">
     <h2>A class on programming and web development at Olin College, Spring 2012.</h2>
     <p style="margin: 0 0">Meets Tuesdays/Fridays 3:20&ndash;5:00 in the Crescent Room. (<a href="class.ics">Download an iCal</a>)</p>
-  </div>
+    <br>
+<div class="fb-like" data-href="http://olinjs.github.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+</div>
 
     <ul>
       <li>Build legit web apps from the ground up. Apps which will make your resume burn bright with ethereal flame.</li>
