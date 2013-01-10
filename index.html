@@ -11,12 +11,15 @@ body {
   color: #e6e6e6; font-family: 'Quattrocento Sans', sans-serif; background: #3573d9;
   padding: 50px 50px 100px; font-size: 16px; 
 }
+#desc { padding-left: 280px; overflow: auto; width: 400px; font-size: 20px; margin-bottom: 30px;}
+#logo { float: left; margin-left: -280px; }
 img { border: 5px solid #59f; display: block; 
 -webkit-transition: border-color linear 0.25s; -moz-transition: border-color linear 0.25s; }
 img:hover { border-color: #fff; }
-h2 { font-weight: normal; font-size: 28px; margin-bottom: 10px; }
+h2 { font-weight: normal; font-size: 30px; margin-bottom: 30px; }
 h2:hover, h3:hover, p:hover, li:hover { color: #fff; }
 h2, h3, p, li { -webkit-transition: color linear 0.25s; -moz-transition: color linear 0.25s; }
+li { margin-bottom: 5px; }
 
 h3 { margin: 30px 0 0; }
 
@@ -28,9 +31,11 @@ a { color: #ddf; }
     </style>
   </head>
   <body>
+  <div id="desc">
     <img src="logo.png" width="250" id="logo">
     <h2>A class on programming and web development at Olin College, Spring 2012.</h2>
     <p style="margin: 0 0">Meets Tuesdays/Fridays 3:20&ndash;5:00 in the Crescent Room. (<a href="class.ics">Download an iCal</a>)</p>
+  </div>
 
     <ul>
       <li>Build legit web apps from the ground up. Apps which will make your resume burn bright with ethereal flame.</li>
