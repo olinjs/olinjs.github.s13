@@ -3,157 +3,590 @@
 <html>
   <head>
     <title>Olin.js</title>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
+
     <meta property="og:title" content="Olin.js: A class on programming and web development." />
 <meta property="og:url" content="http://olinjs.github.com/" />
 <meta property="og:image" content="http://olinjs.github.com/logo-solid.png" />
 <meta property="og:type" content="article" />
 <meta property="og:description" 
   content="Meets Tuesdays/Fridays 3:20&ndash;5:00 in the Crescent Room. Build legit web apps from the ground up. Apps which will make your resume burn bright with ethereal flame." />
-    <style>
+  <style>
 
-html, body { margin: 0; padding: 0; }
-body {
-  color: #e6e6e6; font-family: 'Quattrocento Sans', sans-serif; background: #3573d9;
-  padding: 50px 50px 100px; font-size: 16px; 
-}
-#desc { padding-left: 280px; height: 250px; width: 400px; font-size: 20px; margin-bottom: 30px;}
-#logo { float: left; margin-left: -280px; }
-img { border: 5px solid #59f; display: block; 
--webkit-transition: border-color linear 0.25s; -moz-transition: border-color linear 0.25s; }
-img:hover { border-color: #fff; }
-h2 { font-weight: normal; font-size: 30px; margin-bottom: 30px; }
-h2:hover, h3:hover, p:hover, li:hover { color: #fff; }
-h2, h3, p, li { -webkit-transition: color linear 0.1s; -moz-transition: color linear 0.1s; }
-li { margin-bottom: 5px; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      color: #e6e6e6; font-family: 'Quattrocento Sans', sans-serif; background: #3573d9;
+      font-size: 16px; 
+    }
+    .container {
+      width:100%;
+    }
+    #panel1 {
+      padding-top: 100px; 
+      padding-bottom: 100px; 
+    }
+    #panel2 {
+      padding-top: 100px; 
+      padding-bottom: 100px; 
+      background-color: #099999;
+    }
+    #panel3 {
+      padding-top: 100px; 
+      padding-bottom: 100px; 
+      background-color: #3914AF;
+    }
 
-h3 { margin: 30px 0 0; }
+    .personImg {
+      float: left;
+      padding-right:10px;
+    }
 
-#crew { overflow: auto; }
-#crew img { height: 200px; margin: 0 auto 10px; } 
-#crew p { float: left; text-align: center; margin-right: 10px; }
-#crew p span { max-width: 280px; display: block; text-align: left; margin: 10px 0 0; font-size: 14px; }
-a { color: #ddf; }
+    .carouselImg {
+      width:100%;
+      height:500px;
+    }
 
-#students, #students li { display: block; list-style: none; padding: 0; margin: 0; }
-#students { overflow: auto; margin: 15px 0 15px; }
-#students li { line-height: 74px; width: 300px; margin: 8px 0; float: left; } 
-#students img { width: 64px; display: block; vertical-align: center; float: left; margin-right: 15px; }
+    .from {
+      font-size:15px;
+      font-family: helvetica;
+      font-weight: bold;
+      color: rgb(173, 173, 173);
+      float: right;
+    }
 
-    </style>
-  </head>
-  <body>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=236983706410158";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+    .quote {
+      line-height: 27px;
+      font-weight: bold;
+      font-family: helvetica;
+      font-size: 25px;
+      color: rgb(56, 56, 56);
+      padding-bottom:10px;
+    }
+    /*#desc { height: 250px;  font-size: 20px; margin-bottom: 30px;}*/
+    #logo { float: left; margin-left: -280px; }
+    .ProfileImg { border: 5px solid #59f; display: block; 
+    -webkit-transition: border-color linear 0.25s; -moz-transition: border-color linear 0.25s; }
+    img:hover { border-color: #fff; }
+    h2 { font-weight: normal; font-size: 30px; margin-bottom: 30px; }
+    /*h2:hover, h3:hover, p:hover, li:hover { color: #fff; }*/
+    h2, h3, p, li { -webkit-transition: color linear 0.1s; -moz-transition: color linear 0.1s; }
+    li { margin-bottom: 5px; }
 
-  <div id="desc">
-    <a href="https://github.com/olinjs"><img src="logo-trans.png" width="250" id="logo"></a>
-    <h2>A class on programming and web development at Olin College, Spring 2013.</h2>
-    <p style="margin-top: -20px;">(<a href="https://github.com/olinjs">Github Repo</a>)</p>
-     <br/>
-    <p style="margin: 0 0">Meets Tuesdays/Fridays 3:20&ndash;5:00 in the Crescent Room. (<a href="class.ics">Download an iCal</a>)</p>
-    <br>
-<div class="fb-like" data-href="http://olinjs.github.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
-</div>
+    h3 { margin: 30px 0 0; }
 
-    <ul>
-      <li>Build legit web apps from the ground up. Apps which will make your resume burn bright with ethereal flame.</li>
-      <li>Learn web development and coding skills you need to kick butt at companies like Twitter, Facebook, Google, and Microsoft.</li>
-      <li>Meet and work with representatives from swingin' tech companies in the Boston area.</li>
-      <li>Get Four ENGR credits, which will satisfy your OSS requirement and your awesomeness requirement for the semester. You need this to graduate. No one graduates Olin without being awesome enough.</li>
-    </ul>
+    /*.crew { overflow: auto; }*/
+    .crew img { height: 200px; margin: 0 auto 10px; } 
+    .crew p { float: left; text-align: center; margin-right: 10px; }
+    .crew p span { display: block; text-align: left; margin: 10px 0 0; font-size: 14px; }
+    a { color: #ddf; }
 
-    <p>
-      Olin.js is web development taught the Olin way. It starts with a 3 week crash course in <a href="http://nodejs.org/">Node</a> and Javascript. Then, in the fourth week we bring everything together and create a full fledged, ground up, web application. With this app under our belt we get down to business.
-    </p> 
-    <p>
-      Over the next 6 weeks we do three, two week application sprints. For each sprint students work on teams of 2-3 to develop a prototype application for a specific problem space. Each sprint and is kicked off, and then judged, by a relevant Boston area tech company. In the past we've had some pretty cool sprints, including finance with Intuit, music with Echonest, and government with the Boston Mayor's office. This semester we're looking to raise the bar. We're not saying yet who we're bringing in, but rest assured, they are gonna be awesome.
-    </p>
-    <p>
-      The class concludes with a final 5 week project. The point of this project is to make a fully fleshed out web app, and then launch it. In the end, the main goal of the class is to give students the skills they need to make commercially viable, robust web applications, either for themselves or external companies. With the launch of their final project every student will doing just that. And of course there will a launch party with pizza, prizes, pitches, and tears.
-    </p>
+    #students, #students li { display: block; list-style: none; padding: 0; margin: 0; }
+    #students { overflow: auto; margin: 15px 0 15px; }
+    #students li { line-height: 74px; width: 300px; margin: 8px 0; float: left; } 
+    #students img { width: 64px; display: block; vertical-align: center; float: left; margin-right: 15px; }
 
-    <h3>Enrolled Students</h3>
+  </style>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('#mashupCarousel').carousel({  
+      interval: 5000 // in milliseconds  
+    });
+  });
+  </script>
+</head>
+<body>
+<div class="container">
+  <div id="panel1">
+    <div class="row-fluid">  
+      <div class="span6 offset4">
+        <a href="https://github.com/olinjs"><img class="ProfileImg" src="logo-trans.png" width="250" id="logo" style="margin-top: 15px;"></a>
+
+          <div id="fb-root"></div>
+          <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=236983706410158";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));</script>
+            
+            <h2>A class on programming and web development at Olin College, Spring 2013. (<a href="https://github.com/olinjs">Github Repo</a>)</h2>
+            <p style="margin: 0 0">Meets Tuesdays/Fridays 3:20&ndash;5:00 in the Crescent Room. (<a href="class.ics">Download an iCal</a>)</p>
+            <br>
+            <div class="fb-like" data-href="http://olinjs.github.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+            <ul>
+            <li>Build legit web apps from the ground up. Apps which will make your resume burn bright with ethereal flame.</li>
+            <!-- <li>Learn web development and coding skills you need to kick butt at companies like Twitter, Facebook, Google, and Microsoft.</li> -->
+            <li>Meet and work with representatives from swingin' tech companies in the Boston area.</li>
+            <li>Get Four ENGR credits, which will satisfy your OSS requirement and your awesomeness requirement for the semester. You need this to graduate. No one graduates Olin without being awesome enough.</li>
+          </ul>
+      </div>
+    </div>
+    <div class="row-fluid" style="padding-top:30px;">  
+      <div class="span8 offset2">
+        <div class="row-fluid">  
+          <div class="span4">
+            <div class="quote">"Love it"</div>
+            <div class="from">- Mark Chang, Director of Product at edX</div>
+          </div>
+          <div class="span7 offset">
+            <div class="quote">"I wish this course was around when I was at Olin"</div>
+            <div class="from">- Every Alumni Ever</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row-fluid" style="padding-top:30px;">  
+      <div class="span8 offset2">
+        <p>
+          Olin.js is web development taught the Olin way. It starts with a 3 week crash course in <a href="http://nodejs.org/">Node</a> and Javascript. Then, in the fourth week we bring everything together and create a full fledged, ground up, web application. With this app under our belt we get down to business.
+        </p> 
+        <br/>
+
+        <p>
+          Over the next 6 weeks we do three, two week application sprints. For each sprint students work on teams of 2-3 to develop a prototype application for a specific problem space. Each sprint and is kicked off and then judged by a relevant Boston area tech company. In the past we've had some pretty cool sprints, including finance with Intuit, music with Echonest, and government with the Boston Mayor's office. This semester we're looking to raise the bar. We're not saying yet who we're bringing in, but rest assured, they are gonna be awesome.
+        </p>
+        <br/>
+        <p>
+          The class concludes with a final 4 week project. The point of this project is to make a fully fleshed out web app, and then launch it. In the end, the main goal of the class is to give students the skills they need to make commercially viable, robust web applications, either for themselves or external companies. With the launch of their final project every student will doing just that. And of course there will a launch party with pizza, prizes, pitches, and tears.
+        </p>
+        <br/>
+        <p>
+          This is the course that we always wanted to take but was never offered. We hope you'll join us for this amazing journey. 
+        </p>
+      </div>
+    </div>
+
+    <div class="row-fluid" style="padding-top:40px; padding-bottom:10px;">  
+      <div class="span4 offset2">
+        <h2 style="margin-bottom: 0px;">Our Sponsors</h2>
+        <span style="font-size:12px;">Want to be a sponsor? <a href="mailto:jialiya.huang@students.olin.edu">Contact us</a></span>
+      </div>
+    </div>
+    <div class="row-fluid">  
+      <div class="span2 offset2">
+        <a href="http://the.echonest.com/"><img src="imgs/sponsors/echonest.gif"></a>
+      </div>
+      <div class="span2">
+        <a href="http://www.heroku.com/"><img src="imgs/sponsors/heroku.png" ></a>
+      </div>
+      
+    </div>
+  </div>
+  <div class="row-fluid" id="panel2">  
+    <div class="span8 offset2">
+      <h2>Week 4 - Mashup</h2>
+      <div>
+        <p>
+          After we learned the basics in weeks 1 to 3, we'll showcase what we've learned by making mashups between 2 different services. Our work will be pitted against each other and the winner will get eternal glory while the rest get candy thrown at them.
+        </p>
+      </div>
+      <br/>
+      <div id="mashupCarousel" class="carousel slide">
+        <ol class="carousel-indicators">
+          <li data-target="#mashupCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#mashupCarousel" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="active item">
+            <a href="http://thedecisionroom.herokuapp.com/">
+              <img class="carouselImg" src="imgs/mashups/seger.png">
+            </a>
+            <div class="carousel-caption">
+              <div class="personImg">
+                <a href="http://github.com/mseger"><img src="https://secure.gravatar.com/avatar/828ccde1a7f0c8b5e461bf5678c10d2f?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a>
+              </div>
+              <div class="info">
+                <h4>Margret-Ann Seger, <a href="http://thedecisionroom.herokuapp.com/">The Decision Room</a></h4>
+                <p>Mashup between tt.fm + yelp. The Decision Room helps you make plans among your Facebook friends</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <a href="http://afternoon-wave-2684.her­okuapp.com/">
+              <img class="carouselImg" src="imgs/mashups/crosby.png">
+            </a>
+            <div class="carousel-caption">
+              <div class="personImg">
+                <a href="http://github.com/reyner"><img src="https://secure.gravatar.com/avatar/7ae4ee10ed19796b1bf0585ecc5af143?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a>
+              </div>
+              <div class="info">
+                <h4>Reyner Crosby, <a href="http://afternoon-wave-2684.her­okuapp.com/">Goats</a></h4>
+                <p>Mashup between tt.fm + youtube. Youtube video sharing with your friends.</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <a href="http://olinjs-mashup-aman.herokuapp.com/">
+              <img class="carouselImg" src="imgs/mashups/kapur.png">
+            </a>
+            <div class="carousel-caption">
+              <div class="personImg">
+                <a href="http://github.com/fireblade99"><img src="https://secure.gravatar.com/avatar/83863cc427f37fe98268c4f64dc7d809?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a>
+              </div>
+              <div class="info">
+                <h4>Aman Kapur, <a href="http://olinjs-mashup-aman.herokuapp.com/">Status Editor</a></h4>
+                <p>Mashup between typewithme + facebook. Letting multiple people edit your facebook status at once. Bringing trolling to a new level.</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <a href="http://salty-ridge-5175.heroku­app.com/">
+              <img class="carouselImg" src="imgs/mashups/shane.png">
+            </a>
+            <div class="carousel-caption">
+              <div class="personImg">
+                <a href="http://github.com/skinc"><img width="80px" src="https://secure.gravatar.com/avatar/ff81abef60121b5aee646f7721eac874?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a>
+              </div>
+              <div class="info">
+                <h4>Shane Skikne, <a href="http://salty-ridge-5175.heroku­app.com/">Do Wrk</a></h4>
+                <p>Mashup between Google Doc + pandora. A notebook that withholds rewards in the form of music/gifs/etc until the writing is done.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <a href="http://visual-lastfm.herokuapp.com/">
+              <img class="carouselImg" src="imgs/mashups/may.png">
+            </a>
+            <div class="carousel-caption">
+              <div class="personImg">
+                <a href="http://github.com/madisonmay13"><img src="https://secure.gravatar.com/avatar/3e1a7d9ccfa13aed6bc6cb7ec6892518?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a>
+              </div>
+              <div class="info">
+                <h4>Madison May, <a href="http://visual-lastfm.herokuapp.com/">Visual Last.fm</a></h4>
+                <p>Mashup between OneReceipt + Grooveshark. Visual Last.fm lets you see what are your top songs.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <a href="http://listpop.herokuapp.com/">
+              <img class="carouselImg" src="imgs/mashups/shane.png">
+            </a>
+            <div class="carousel-caption">
+              <div class="personImg">
+                <a href="http://github.com/redfern314"><img src="https://secure.gravatar.com/avatar/ee04ed0af6cc6e2cc4fe8d67ce0f8a66?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a>
+              </div>
+              <div class="info">
+                <h4>Derek Redfern, <a href="http://listpop.herokuapp.com/">List Pop</a></h4>
+                <p>Mashup between typewithme +musicmap.herokuapp.com. Songs in lists.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <a href="http://boiling-beyond-2611.herokuapp.com/">
+              <img class="carouselImg" src="imgs/mashups/kearney.png">
+            </a>
+            <div class="carousel-caption">
+              <div class="personImg">
+                <a href="http://github.com/dankearney"><img width="80px" src="https://secure.gravatar.com/avatar/cfdcb5890f87dc254bb99863ac7cdcdb?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a>
+              </div>
+              <div class="info">
+                <h4>Daniel Kearney, <a href="http://boiling-beyond-2611.herokuapp.com/">Shekel Swap</a></h4>
+                <p>Mashup between Bitcoin + detexify. Currency exchange.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <a href="http://fetchflix.herokuapp.com/">
+              <img class="carouselImg" src="imgs/mashups/chae.png">
+            </a>
+            <div class="carousel-caption">
+              <div class="personImg">
+                <a href="http://github.com/asjchae"><img width="80px" src="https://secure.gravatar.com/avatar/49a31551580bd684d58969bf04eaf1f1?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a>
+              </div>
+              <div class="info">
+                <h4>Ari Chae, <a href="http://fetchflix.herokuapp.com/">Fetch Flix</a></h4>
+                <p>Mashup between fetchnotes + Netflix. Easier movie recommendations.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <a href="http://gentle-waters-8936.hero­kuapp.com/">
+              <img class="carouselImg" src="imgs/mashups/mason.jpg">
+            </a>
+            <div class="carousel-caption">
+              <div class="personImg">
+                <a href="http://github.com/mdelrosa"><img width="80px" src="https://secure.gravatar.com/avatar/f97fc8d0b2bb88e646e6d868f44c721e?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a>
+              </div>
+              <div class="info">
+                <h4>Mason del Rosario, <a href="http://gentle-waters-8936.hero­kuapp.com/">Square Tube</a></h4>
+                <p>Mashup between Square + YouTube. Easier movie recommendations.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <a href="http://julianablog.herokuapp.com/">
+              <img class="carouselImg" src="imgs/mashups/nazare.png">
+            </a>
+            <div class="carousel-caption">
+              <div class="personImg">
+                <a href="http://github.com/JNazare"><img src="https://secure.gravatar.com/avatar/d934e24c31a10a19dc238d6a75106a32?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a>
+              </div>
+              <div class="info">
+                <h4>Juliana Nazare, <a href="http://julianablog.herokuapp.com/">Square Tube</a></h4>
+                <p>Mashup between The Useless Website + Netflix. Blogging platform.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <a href="http://sheltered-crag-4327.herokuapp.com/cats/new">
+              <img class="carouselImg" src="imgs/mashups/dlee.png">
+            </a>
+            <div class="carousel-caption">
+              <div class="personImg">
+                <a href="http://github.com/doyunglee"><img src="https://secure.gravatar.com/avatar/d4ad7f4022b9b86c2da92a718df3aeba?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a>
+              </div>
+              <div class="info">
+                <h4>Doyung Lee, <a href="http://sheltered-crag-4327.herokuapp.com/cats/new">Cats, Germs, and Feels</a></h4>
+                <p>Mashup between webmd + attackofthecute.com. Ecards for when your friends are sick.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <a href="http://guarded-retreat-7885.he­rokuapp.com/">
+              <img class="carouselImg" src="imgs/mashups/sarver.png">
+            </a>
+            <div class="carousel-caption">
+              <div class="personImg">
+                <a href="http://github.com/Velociraptor"><img src="https://secure.gravatar.com/avatar/33f738a6212767e6ad2f4a6c121278f3?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a>
+              </div>
+              <div class="info">
+                <h4>Hannah Sarver, <a href="http://guarded-retreat-7885.he­rokuapp.com/">Teux View</a></h4>
+                <p>Mashup between teuxdeux.com + VINE. Task list using gifs.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <a href="http://hidden-coast-9360.herok­uapp.com/">
+              <img class="carouselImg" src="imgs/mashups/langowitz.png">
+            </a>
+            <div class="carousel-caption">
+              <div class="personImg">
+                <a href="http://github.com/JLangowitz"><img width="80px" src="https://secure.gravatar.com/avatar/3b137c9085274ab651cad219797bd9f4?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a>
+              </div>
+              <div class="info">
+                <h4>Joshua Langowitz, <a href="http://hidden-coast-9360.herok­uapp.com/">DropTube</a></h4>
+                <p>Mashup between Dropbox + YouTube. Sharing videos.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <a href="http://pnpnotes.herokuapp.com/">
+              <img class="carouselImg" src="imgs/mashups/chen.png">
+            </a>
+            <div class="carousel-caption">
+              <div class="personImg">
+                <a href="http://github.com/aeri"><img src="https://secure.gravatar.com/avatar/a040779988495fd525bafc6737722f5c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a>
+              </div>
+              <div class="info">
+                <h4>Thomas Chen, <a href="http://pnpnotes.herokuapp.com/">PnP Notes</a></h4>
+                <p>Mashup between Chegg.com + Mobee. Sharing videos.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <a href="http://gentle-reaches-3926.her­okuapp.com/">
+              <img class="carouselImg" src="imgs/mashups/alee.png">
+            </a>
+            <div class="carousel-caption">
+              <div class="personImg">
+                <a href="http://github.com/alee123"><img width="80px" src="https://secure.gravatar.com/avatar/b5cf199dd94652ee7b9da379f9612ce2?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a>
+              </div>
+              <div class="info">
+                <h4>Amanda Lee, <a href="http://gentle-reaches-3926.her­okuapp.com/">Clever Notes</a></h4>
+                <p>Mashup between Fetchnotes + Venmo. Notes for payment.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <a href="http://morning-crag-3399.herok­uapp.com/">
+              <img class="carouselImg" src="imgs/mashups/austin.png">
+            </a>
+            <div class="carousel-caption">
+              <div class="personImg">
+                <a href="http://github.com/KaminariNoKage"><img src="https://secure.gravatar.com/avatar/5e2df34255108dbd22998c5729170d1f?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a>
+              </div>
+              <div class="info">
+                <h4>Kai Austin, <a href="http://morning-crag-3399.herok­uapp.com/">ViTube</a></h4>
+                <p>Mashup between Vine + youtube.com. Custom image albums.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <a class="carousel-control left" href="#mashupCarousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#mashupCarousel" data-slide="next">&rsaquo;</a>
+      </div>
+      
+    </div>
+  </div>
+  <div id="panel3">
+    <div class="row-fluid">  
+      <div class="span8 offset2">
+        <h2>Weeks 1-3</h2>
+        <p>
+          It starts with a 3 week crash course in <a href="http://nodejs.org/">Node</a>, Javascript, and MongoDB. We'll start off by reading the Node Beginner Book before we launch into the Express framework. Along the way we'll figure out templating engines such as Jade and interact with external APIs such as Facebook. We'll deploy everything we make to Heroku.
+        </p>
+        <p>
+          We'll learn some client side JS in order to spice up our sites. Bootstrap will also come in handy for making everything we do look better.
+        </p>
+        <p>
+          Here are just a few of the things we'll make while we learn our core skills:
+        </p>
+        <br/>
+        <div class="row-fluid"  style="text-align: center;">
+          <div class="span4">
+            <img style="height:200px; margin-left:auto; margin-right:auto;" class="ProfileImg" src="imgs/week3/homework4.png">
+            <h4>Homework 4</h4> 
+            Making a Twitter Clone
+          </div>
+          <div class="span4"  >
+            <img style="height:200px; margin-left:auto; margin-right:auto;" class="ProfileImg" src="imgs/week3/homework5.png">
+            <h4>Homework 5</h4> 
+            Making a Facebook/Myspace Mashup
+          </div>
+          <div class="span4">
+            <img style="height:200px; margin-left:auto; margin-right:auto;" class="ProfileImg" src="imgs/week3/homework6.png">
+            <h4>Homework 6</h4> 
+              Making a Facebook caption roulette
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid" style="padding-top:100px;">  
+    <div class="span8 offset2">
+      
+    <h2>Enrolled Students</h2>
     <ul id="students">
-      <li><a href="http://github.com/cvilain"><b>Chloe Vilain</b> <img src="https://secure.gravatar.com/avatar/4e4c186ed8e08c6c6692b994167027a8?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/abekim"><b>Abe Kim</b> <img src="https://secure.gravatar.com/avatar/0fa724a5dc487a85bdaeb541ac53c67d?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/mseger"><b>Margaret Ann Seger</b> <img src="https://secure.gravatar.com/avatar/828ccde1a7f0c8b5e461bf5678c10d2f?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/kayak0806"><b>Kaitlin Gallagher</b> <img src="https://secure.gravatar.com/avatar/c241adf3454d1631673963c446e5ca9a?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/newmu"><b>Alec Radford</b> <img src="https://secure.gravatar.com/avatar/691552eea2f4352c7d5e948f0aff0a52?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/dankearney"><b>Daniel Kearney</b> <img src="https://secure.gravatar.com/avatar/cfdcb5890f87dc254bb99863ac7cdcdb?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/reyner"><b>Reyner Crosby</b> <img src="https://secure.gravatar.com/avatar/7ae4ee10ed19796b1bf0585ecc5af143?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/TheoT"><b>Theo Thompson</b> <img src="https://secure.gravatar.com/avatar/1213cd2279dfcde061cac550b560a923?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/alee123"><b>Amanda Lee</b> <img src="https://secure.gravatar.com/avatar/b5cf199dd94652ee7b9da379f9612ce2?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/JNazare"><b>Juliana Nazare</b> <img src="https://secure.gravatar.com/avatar/d934e24c31a10a19dc238d6a75106a32?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/KaminariNoKage "><b>Kai Austin</b> <img src="https://secure.gravatar.com/avatar/5e2df34255108dbd22998c5729170d1f?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/asjchae"><b>Ari Chae</b> <img src="https://secure.gravatar.com/avatar/49a31551580bd684d58969bf04eaf1f1?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/fireblade99"><b>Aman Kapur</b> <img src="https://secure.gravatar.com/avatar/83863cc427f37fe98268c4f64dc7d809?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/rbiniaz"><b>Rachel H. Biniaz</b> <img src="https://secure.gravatar.com/avatar/f776358eeddcc1485d2177fbb2559459?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/rmathew1992"><b>Rachel Mathew</b> <img src="https://secure.gravatar.com/avatar/adb7e73cd67e45b1459b0ad32b3237ee?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/redfern314 "><b>Derek Redfern</b> <img src="https://secure.gravatar.com/avatar/ee04ed0af6cc6e2cc4fe8d67ce0f8a66?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/rachelbobbins"><b>Rachel Bobbins</b> <img src="https://secure.gravatar.com/avatar/01a65df644b0b322071bf25890b0e894?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/aeri"><b>Thomas Chen</b> <img src="https://secure.gravatar.com/avatar/a040779988495fd525bafc6737722f5c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/mdelrosa "><b>Mason del Rosario</b> <img src="https://secure.gravatar.com/avatar/f97fc8d0b2bb88e646e6d868f44c721e?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/Keelyh"><b>Keely Haverstock</b> <img src="https://secure.gravatar.com/avatar/087001add1b7f3fb98cdc5df1b636773?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/noglows "><b>Jessica Noglows</b> <img src="https://secure.gravatar.com/avatar/5c485709cc223ca028134c778717ad97?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/apcuad"><b>Andrea Cuadra</b> <img src="https://secure.gravatar.com/avatar/c96251e19486b8b639d333ad023c0a6b?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/lego6245"><b>William Saulnier</b> <img src="https://secure.gravatar.com/avatar/21bac82f9e10761ac7418aff257c2035?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/mkorpusik "><b>Mandy Korpusik</b> <img src="https://secure.gravatar.com/avatar/a828843e6c8f86eeecc1e86805934942?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/skinc"><b>Shane Skikne</b> <img src="https://secure.gravatar.com/avatar/ff81abef60121b5aee646f7721eac874?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/instagraham"><b>Graham Hooton</b> <img src="https://secure.gravatar.com/avatar/262f5a66a0408acd8a56324d3c371e2e?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/pmcote"><b>Paige Cote</b> <img src="https://secure.gravatar.com/avatar/8eba086b9ad9cea68c06c01f5553b9ca?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/therightnee"><b>James Nee</b> <img src="https://secure.gravatar.com/avatar/358211cda43d0d375720d17598022c86?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/graceahn "><b>Grace Ahn</b> <img src="https://secure.gravatar.com/avatar/0d5eea33130aa8e5385a78d5d0a05669?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/ltseng"><b>Lillian Tseng</b> <img src="https://secure.gravatar.com/avatar/198264f60b114a5c3b3db50ff82e8faf?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/3milylin"><b>Emily Lin</b> <img src="https://secure.gravatar.com/avatar/84e00f0d42117ea517df5fc4f6117688?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/kidnote"><b>David Zhu </b> <img src="https://secure.gravatar.com/avatar/423b00a4e0b65847b391b746fd408cf2?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/JLangowitz "><b>Joshua Langowitz</b> <img src="https://secure.gravatar.com/avatar/3b137c9085274ab651cad219797bd9f4?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/madisonmay13"><b>Madison May</b> <img src="https://secure.gravatar.com/avatar/3e1a7d9ccfa13aed6bc6cb7ec6892518?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/harii"><b>Hari Iyer</b> <img src="https://secure.gravatar.com/avatar/4d5a4377a381c8e08a6e518dee310cd6?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/mlthorbecke"><b>Mariko Thorbecke</b> <img src="https://secure.gravatar.com/avatar/2da2d332f47ebec9a961249c27f10db3?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/benkroop"><b>Ben Kroop</b> <img src="https://secure.gravatar.com/avatar/49a5493f09b2852a8202abf5801149aa?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/Velociraptor "><b>Hannah B. Sarver </b> <img src="https://secure.gravatar.com/avatar/33f738a6212767e6ad2f4a6c121278f3?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-<li><a href="http://github.com/doyunglee"><b>Doyung Lee </b> <img src="https://secure.gravatar.com/avatar/d4ad7f4022b9b86c2da92a718df3aeba?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
-
-
+<!--       <li><a href="http://github.com/cvilain"><b>Chloe Vilain</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/4e4c186ed8e08c6c6692b994167027a8?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+ --><li><a href="http://github.com/abekim"><b>Abe Kim</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/0fa724a5dc487a85bdaeb541ac53c67d?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/mseger"><b>Margaret Ann Seger</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/828ccde1a7f0c8b5e461bf5678c10d2f?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<!-- <li><a href="http://github.com/kayak0806"><b>Kaitlin Gallagher</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/c241adf3454d1631673963c446e5ca9a?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+ --><li><a href="http://github.com/newmu"><b>Alec Radford</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/691552eea2f4352c7d5e948f0aff0a52?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/dankearney"><b>Daniel Kearney</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/cfdcb5890f87dc254bb99863ac7cdcdb?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/reyner"><b>Reyner Crosby</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/7ae4ee10ed19796b1bf0585ecc5af143?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/TheoT"><b>Theo Thompson</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/1213cd2279dfcde061cac550b560a923?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/alee123"><b>Amanda Lee</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/b5cf199dd94652ee7b9da379f9612ce2?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/JNazare"><b>Juliana Nazare</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/d934e24c31a10a19dc238d6a75106a32?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/KaminariNoKage "><b>Kai Austin</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/5e2df34255108dbd22998c5729170d1f?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/asjchae"><b>Ari Chae</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/49a31551580bd684d58969bf04eaf1f1?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/fireblade99"><b>Aman Kapur</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/83863cc427f37fe98268c4f64dc7d809?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<!-- <li><a href="http://github.com/rbiniaz"><b>Rachel H. Biniaz</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/f776358eeddcc1485d2177fbb2559459?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+ --><li><a href="http://github.com/rmathew1992"><b>Rachel Mathew</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/adb7e73cd67e45b1459b0ad32b3237ee?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/redfern314 "><b>Derek Redfern</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/ee04ed0af6cc6e2cc4fe8d67ce0f8a66?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<!-- <li><a href="http://github.com/rachelbobbins"><b>Rachel Bobbins</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/01a65df644b0b322071bf25890b0e894?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+ --><li><a href="http://github.com/aeri"><b>Thomas Chen</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/a040779988495fd525bafc6737722f5c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/mdelrosa "><b>Mason del Rosario</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/f97fc8d0b2bb88e646e6d868f44c721e?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/Keelyh"><b>Keely Haverstock</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/087001add1b7f3fb98cdc5df1b636773?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<!-- <li><a href="http://github.com/noglows "><b>Jessica Noglows</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/5c485709cc223ca028134c778717ad97?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/apcuad"><b>Andrea Cuadra</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/c96251e19486b8b639d333ad023c0a6b?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/lego6245"><b>William Saulnier</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/21bac82f9e10761ac7418aff257c2035?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+ -->
+<li><a href="http://github.com/mkorpusik "><b>Mandy Korpusik</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/a828843e6c8f86eeecc1e86805934942?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/skinc"><b>Shane Skikne</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/ff81abef60121b5aee646f7721eac874?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/instagraham"><b>Graham Hooton</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/262f5a66a0408acd8a56324d3c371e2e?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<!-- <li><a href="http://github.com/pmcote"><b>Paige Cote</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/8eba086b9ad9cea68c06c01f5553b9ca?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+ <li><a href="http://github.com/therightnee"><b>James Nee</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/358211cda43d0d375720d17598022c86?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/graceahn "><b>Grace Ahn</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/0d5eea33130aa8e5385a78d5d0a05669?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/ltseng"><b>Lillian Tseng</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/198264f60b114a5c3b3db50ff82e8faf?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/3milylin"><b>Emily Lin</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/84e00f0d42117ea517df5fc4f6117688?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/kidnote"><b>David Zhu </b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/423b00a4e0b65847b391b746fd408cf2?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+-->
+<li><a href="http://github.com/JLangowitz "><b>Joshua Langowitz</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/3b137c9085274ab651cad219797bd9f4?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/madisonmay13"><b>Madison May</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/3e1a7d9ccfa13aed6bc6cb7ec6892518?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<!-- <li><a href="http://github.com/harii"><b>Hari Iyer</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/4d5a4377a381c8e08a6e518dee310cd6?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/mlthorbecke"><b>Mariko Thorbecke</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/2da2d332f47ebec9a961249c27f10db3?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/benkroop"><b>Ben Kroop</b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/49a5493f09b2852a8202abf5801149aa?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li> -->
+<li><a href="http://github.com/Velociraptor "><b>Hannah B. Sarver </b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/33f738a6212767e6ad2f4a6c121278f3?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
+<li><a href="http://github.com/doyunglee"><b>Doyung Lee </b> <img class="ProfileImg" src="https://secure.gravatar.com/avatar/d4ad7f4022b9b86c2da92a718df3aeba?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></li>
 
 </ul>
 
-    <h3>Your Teaching Crew</h3>
-    <div id="crew">
-      <p><img src="https://sphotos-a.xx.fbcdn.net/hphotos-prn1/p206x206/547858_10151166188985676_44503551_n.jpg">
-        <b><a href="mailto:david.gaynor@students.olin.edu">David Gaynor</a></b>
-        <br><a href="http://github.com/runnedrun">github/runnedrun</a>
-        <br><span>David Gaynor has never been on Reddit. He didn't know what Xkcd was until college.  Until his senior year of highschool he thought that Youtube was a video blogging service. Or maybe that was senior year of college. Anyway, even though he's a bit old fashioned, David still gets his code on in some pretty cool ways.  He's written test suites for tiny robots in C, rewrote the python facebook API, and has been working on the same side project for 6 months. Wow, that dedication. Or stupidity. One of the two. He's worked for Pivotal Labs and Twitter, and is going back to San Fran next fall, as a full time Tweeter. If I had to describe David in one word it would be: &quot;strikingly similar to Tim Ryan in appearance, but only when he has long hair&quot;.</span></p>
-      <p><img src="http://static.tumblr.com/edy5jpt/y4fmay3to/vanity-conference">
-        <b><a href="mailto:timothy.ryan@students.olin.edu">Tim Ryan</a></b>
-        <br><a href="http://github.com/tcr">github/tcr</a>
-        <br><span>Tim was born, raised, and will one day die in the loving embrace of New England. He has been using the Internet since he was just four years old, sharpened his teeth on AOL webcomics and Invader Zim message boards, and made horrible abominations on Geocities using everyone's favorite language, JavaScript. Ten years later, this became the cool thing to do and Tim rocketed to Internet stardom. He's authored compilers, &lt;canvas&gt; shims, and trendy Lisps, developed for Intuit, PMed Microsoft, and rocked the HTML5 boat at Game Closure. He's interested in making computing more accessible to everyone, and has a penchant for APIs and platforms. Tim loves acting, vintage video games, and typography, and one day you'll find him mad, fleeing to the coast of Ireland, writing fishing novels. </span></p>
-      <p><img src="https://sphotos-a.xx.fbcdn.net/hphotos-ash4/403695_10150584876607784_1021260198_n.jpg">
-        <b><a href="mailto:jialiya.huang@students.olin.edu">Jia Huang</a></b>
-        <br><a href="http://github.com/jiahuang">github/jiahuang</a
-        <br><span>Jia is an excellent student, which is rather impressive considering she doesn't know a word of English. She was raised in China until her parents stuffed her into a small crate and shipped her to America. Unfortunately, the crate was lost from 1998-2003 before arriving, which severely stunted the poor girl's growth. Upon being freed, Jia was baffled and scared of the outdoor environment and has since then been stuck behind a computer. Jia has worked for multiple startups, as well as Amazon, Microsoft, and Twilio, and has recently developed a strange interest in hardware. In short, Jia is pretty small, but she could probably still beat you up. </span></p>
-      <p><img src="https://sphotos-a.xx.fbcdn.net/hphotos-snc6/p206x206/285552_2087558665789_6675257_n.jpg">
-        <b><a href="mailto:wcdolphin@gmail.com">Cory Dolphin</a></b>
-        <br><a href="http://github.com/wcdolphin">github/wcdolphin</a>
-        <br><span>Cory is that guy. You know, that guy who makes the design decisions. The guy who makes things look pretty. The good news is that he actually has the coding chops to back up his “design thinking”.  He's been known to make some crazy stuff in Python (and Flask), has (supposedly) made a bartending robot, and spent the last 2 summers single handedly making Microsoft a cool company. In the end all you need to know about Cory is that he speaks softly, carries a big stick, and sometimes uses that stick to awkwardly type on his computer.  And he still gets a lot done.
-    </span></p>
     </div>
-    <div id="crew">
-      <p><img src="http://sphotos-b.xx.fbcdn.net/hphotos-ash4/402372_2853430369225_1990434808_n.jpg">
-        <b><a href="mailto:Aaron.Greenberg@students.olin.edu">Aaron Greenberg</a></b>
-        <br><a href="https://github.com/aaronjgreenberg">github/aaronjgreenberg</a>
-        <br><span>Aaron is cool. That is all.</span></p>
-      <p><img src="http://sphotos-a.xx.fbcdn.net/hphotos-prn1/45534_3634723286771_309854048_n.jpg">
-        <b><a href="mailto:paul.booth@students.olin.edu">Paul Booth</a></b>
-        <br><a href="https://github.com/paulbooth">github/paulbooth</a>
-        <br><span>Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth</span></p>
+  </div>
+
+  <div class="row-fluid" style="padding-top:80px;">  
+    <div class="span8 offset2">
+      <h2>The Teaching Crew</h2>
+        <div class="row-fluid crew">
+          <div class="span4">
+            <p>
+            <img class="ProfileImg" src="https://sphotos-a.xx.fbcdn.net/hphotos-prn1/p206x206/547858_10151166188985676_44503551_n.jpg">
+            <b><a href="mailto:david.gaynor@students.olin.edu">David Gaynor</a></b>
+            <br><a href="http://github.com/runnedrun">github/runnedrun</a>
+            <br><span>David Gaynor has never been on Reddit. He didn't know what Xkcd was until college.  Until his senior year of highschool he thought that Youtube was a video blogging service. Or maybe that was senior year of college. Anyway, even though he's a bit old fashioned, David still gets his code on in some pretty cool ways.  He's written test suites for tiny robots in C, rewrote the python facebook API, and has been working on the same side project for 6 months. Wow, that dedication. Or stupidity. One of the two. He's worked for Pivotal Labs and Twitter, and is going back to San Fran next fall, as a full time Tweeter. If I had to describe David in one word it would be: &quot;strikingly similar to Tim Ryan in appearance, but only when he has long hair&quot;.</span>
+            </p>
+          </div>
+          <div class="span4">
+            <p>
+            <img class="ProfileImg" src="http://static.tumblr.com/edy5jpt/y4fmay3to/vanity-conference">
+            <b><a href="mailto:timothy.ryan@students.olin.edu">Tim Ryan</a></b>
+            <br><a href="http://github.com/tcr">github/tcr</a>
+            <br><span>Tim was born, raised, and will one day die in the loving embrace of New England. He has been using the Internet since he was just four years old, sharpened his teeth on AOL webcomics and Invader Zim message boards, and made horrible abominations on Geocities using everyone's favorite language, JavaScript. Ten years later, this became the cool thing to do and Tim rocketed to Internet stardom. He's authored compilers, &lt;canvas&gt; shims, and trendy Lisps, developed for Intuit, PMed Microsoft, and rocked the HTML5 boat at Game Closure. He's interested in making computing more accessible to everyone, and has a penchant for APIs and platforms. Tim loves acting, vintage video games, and typography, and one day you'll find him mad, fleeing to the coast of Ireland, writing fishing novels. </span>
+            </p>
+          </div>
+          <div class="span4">
+            <p>
+            <img class="ProfileImg" src="https://sphotos-a.xx.fbcdn.net/hphotos-ash4/403695_10150584876607784_1021260198_n.jpg">
+            <b><a href="mailto:jialiya.huang@students.olin.edu">Jia Huang</a></b>
+            <br><a href="http://github.com/jiahuang">github/jiahuang</a
+            <br><span>Jia is an excellent student, which is rather impressive considering she doesn't know a word of English. She was raised in China until her parents stuffed her into a small crate and shipped her to America. Unfortunately, the crate was lost from 1998-2003 before arriving, which severely stunted the poor girl's growth. Upon being freed, Jia was baffled and scared of the outdoor environment and has since then been stuck behind a computer. Jia has worked for multiple startups, as well as Amazon, Microsoft, and Twilio, and has recently developed a strange interest in hardware. In short, Jia is pretty small, but she could probably still beat you up. </span>
+            </p>
+          </div>
+        </div>
     </div>
+  </div>
+
+  <div class="row-fluid" style="padding-top:20px; padding-bottom:100px;">  
+    <div class="span8 offset2">
+      <h2>The NINJAs</h2>
+        <div class="row-fluid crew">
+          <div class="span4">
+            <p>
+            <img class="ProfileImg" src="https://sphotos-a.xx.fbcdn.net/hphotos-snc6/p206x206/285552_2087558665789_6675257_n.jpg">
+            <b><a href="mailto:wcdolphin@gmail.com">Cory Dolphin</a></b>
+            <br><a href="http://github.com/wcdolphin">github/wcdolphin</a>
+            <br><span>Cory is that guy. You know, that guy who makes the design decisions. The guy who makes things look pretty. The good news is that he actually has the coding chops to back up his &quot;design thinking&quot;.  He's been known to make some crazy stuff in Python (and Flask), has (supposedly) made a bartending robot, and spent the last 2 summers single handedly making Microsoft a cool company. In the end all you need to know about Cory is that he speaks softly, carries a big stick, and sometimes uses that stick to awkwardly type on his computer.  And he still gets a lot done.
+           </span>
+            </p>
+          </div>
+          <div class="span4">
+            <p>
+            <img class="ProfileImg" src="http://sphotos-b.xx.fbcdn.net/hphotos-ash4/402372_2853430369225_1990434808_n.jpg">
+            <b><a href="mailto:Aaron.Greenberg@students.olin.edu">Aaron Greenberg</a></b>
+            <br><a href="https://github.com/aaronjgreenberg">github/aaronjgreenberg</a>
+            <br><span>Aaron Greenberg. Champion. Womanizer. Webmaster. He is a California boy to the core, with his head stuck in the sandy beaches back west. A charmer by nature, Aaron woos women with his deep, rippling eyes and manages to mesmerize men with his crude wit. Be warned. The calm, soothing voice is just a front; Aaron is really a beast of the world, and takes names.</span>
+            </p>
+          </div>
+          <div class="span4">
+            <p>
+            <img class="ProfileImg" src="http://sphotos-a.xx.fbcdn.net/hphotos-prn1/45534_3634723286771_309854048_n.jpg">
+            <b><a href="mailto:paul.booth@students.olin.edu">Paul Booth</a></b>
+            <br><a href="https://github.com/paulbooth">github/paulbooth</a>
+            <br><span>Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth</span>
+            </p>
+          </div>
+        </div>
+    </div>
+  </div>
+   
+  </div>
   </body>
 </html>
