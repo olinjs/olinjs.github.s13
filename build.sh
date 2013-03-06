@@ -1,0 +1,1 @@
+jade -Po info.json index.jade
