@@ -1,0 +1,527 @@
+!!! 5
+html
+  head
+    title Olin.js
+    link(href='http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Quattrocento+Sans', rel='stylesheet', type='text/css')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.js')
+    script(src='http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js')
+    meta(property='og:title', content='Olin.js: A class on programming and web development.')
+    meta(property='og:url', content='http://olinjs.github.com/')
+    meta(property='og:image', content='http://olinjs.github.com/logo-solid.png')
+    meta(property='og:type', content='article')
+    meta(property='og:description', content='Meets Tuesdays/Fridays 3:20–5:00 in the Crescent Room. Build legit web apps from the ground up. Apps which will make your resume burn bright with ethereal flame.')
+    style
+      html, body { margin: 0; padding: 0; }
+      body {
+      color: #e6e6e6; font-family: 'Quattrocento Sans', sans-serif; background: #3573d9;
+      font-size: 16px;
+      }
+      .container {
+      width:100%;
+      }
+      #panel1 {
+      padding-top: 100px;
+      padding-bottom: 100px;
+      }
+      #panel2 {
+      padding-top: 100px;
+      padding-bottom: 100px;
+      background-color: #099999;
+      }
+      #panel3 {
+      padding-top: 100px;
+      padding-bottom: 100px;
+      background-color: #3914AF;
+      }
+      #panel4 {
+      padding-top: 100px;
+      padding-bottom: 100px;
+      background-color: #008110;
+      }
+      .personImg {
+      float: left;
+      padding-right:10px;
+      }
+      .carouselImg {
+      width:100%;
+      height:500px;
+      }
+      .from {
+      font-size:15px;
+      font-family: helvetica;
+      font-weight: bold;
+      color: rgb(173, 173, 173);
+      float: right;
+      }
+      .quote {
+      line-height: 27px;
+      font-weight: bold;
+      font-family: helvetica;
+      font-size: 25px;
+      color: rgb(56, 56, 56);
+      padding-bottom:10px;
+      }
+      
+      #logo { float: left; margin-left: -280px; }
+      .ProfileImg { border: 5px solid #59f; display: block;
+      -webkit-transition: border-color linear 0.25s; -moz-transition: border-color linear 0.25s; }
+      img:hover { border-color: #fff; }
+      h2 { font-weight: normal; font-size: 30px; margin-bottom: 30px; }
+      h2, h3, p, li { -webkit-transition: color linear 0.1s; -moz-transition: color linear 0.1s; }
+      li { margin-bottom: 5px; }
+      h3 { margin: 30px 0 0; }
+      .crew img { height: 200px; margin: 0 auto 10px; }
+      .crew p { float: left; text-align: center; margin-right: 10px; }
+      .crew p span { display: block; text-align: left; margin: 10px 0 0; font-size: 14px; }
+      a { color: #ddf; }
+      #students, #students li { display: block; list-style: none; padding: 0; margin: 0; }
+      #students { overflow: auto; margin: 15px 0 15px; }
+      #students li { line-height: 74px; width: 300px; margin: 8px 0; float: left; }
+      #students img { width: 64px; display: block; vertical-align: center; float: left; margin-right: 15px; }
+    script(type='text/javascript')
+      $(document).ready(function(){
+        $('#mashupCarousel').carousel({
+          interval: 5000 // in milliseconds
+        });
+        $('#echoNestCarousel').carousel({
+          interval: 5000 // in milliseconds
+        });
+        // add active to first list items
+        $($('#echoNestCarousel .item:first')[0]).addClass("active");
+        $($('#echoNestCarousel li:first')[0]).addClass("active");
+
+                      //li.active(data-target='#echoNestCarousel', data-slide-to='0')
+
+      });
+  body
+    .container
+      #panel1
+        .row-fluid
+          .span6.offset4
+            a(href='https://github.com/olinjs')
+              img#logo.ProfileImg(src='logo-trans.png', width='250', style='margin-top: 15px;')
+            #fb-root
+            script
+              (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=236983706410158";
+              fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'facebook-jssdk'));
+            h2
+              | A class on programming and web development at Olin College, Spring 2013. (
+              a(href='https://github.com/olinjs') Github Repo
+              | )
+            p(style='margin: 0 0;')
+              | Meets Tuesdays/Fridays 3:20–5:00 in the Crescent Room. (
+              a(href='class.ics') Download an iCal
+              | )
+            br
+            .fb-like(data-href='http://olinjs.github.com/', data-send='false', data-layout='button_count', data-width='450', data-show-faces='true')
+            ul
+              li
+                | Build legit web apps from the ground up. Apps which will make your resume burn bright with ethereal flame.
+              // <li>Learn web development and coding skills you need to kick butt at companies like Twitter, Facebook, Google, and Microsoft.</li>
+              li
+                | Meet and work with representatives from swingin' tech companies in the Boston area.
+              li
+                | Get Four ENGR credits, which will satisfy your OSS requirement and your awesomeness requirement for the semester. You need this to graduate. No one graduates Olin without being awesome enough.
+        .row-fluid(style='padding-top: 30px;')
+          .span8.offset2
+            .row-fluid
+              .span4
+                .quote "Love it"
+                .from - Mark Chang, Director of Product at edX
+              .span7.offset
+                .quote "I wish this course was around when I was at Olin"
+                .from - Every Alumni Ever
+        .row-fluid(style='padding-top: 30px;')
+          .span8.offset2
+            p
+              | Olin.js is web development taught the Olin way. It starts with a 3 week crash course in
+              a(href='http://nodejs.org/') Node
+              | and Javascript. Then, in the fourth week we bring everything together and create a full fledged, ground up, web application. With this app under our belt we get down to business.
+            br
+            p
+              | Over the next 6 weeks we do three, two week application sprints. For each sprint students work on teams of 2-3 to develop a prototype application for a specific problem space. Each sprint and is kicked off and then judged by a relevant Boston area tech company. In the past we've had some pretty cool sprints, including finance with Intuit, music with Echonest, and government with the Boston Mayor's office. This semester we're looking to raise the bar. We're not saying yet who we're bringing in, but rest assured, they are gonna be awesome.
+            br
+            p
+              | The class concludes with a final 4 week project. The point of this project is to make a fully fleshed out web app, and then launch it. In the end, the main goal of the class is to give students the skills they need to make commercially viable, robust web applications, either for themselves or external companies. With the launch of their final project every student will doing just that. And of course there will a launch party with pizza, prizes, pitches, and tears.
+            br
+            p
+              | This is the course that we always wanted to take but was never offered. We hope you'll join us for this amazing journey.
+        .row-fluid(style='padding-top: 40px; padding-bottom: 10px;')
+          .span4.offset2
+            h2(style='margin-bottom: 0px;') Our Sponsors
+            span(style='font-size: 12px;')
+              | Want to be a sponsor?
+              a(href='mailto:jialiya.huang@students.olin.edu') Contact us
+        .row-fluid
+          .span2.offset2
+            a(href='http://the.echonest.com/')
+              img(src='imgs/sponsors/echonest.gif')
+          .span2
+            a(href='http://www.heroku.com/')
+              img(src='imgs/sponsors/heroku.png')
+      #panel4.row-fluid
+        .span8.offset2
+          h2 Weeks 5 & 6 - EchoNest Sprint
+          div
+            p
+              | We brought in
+              a(href='http://the.echonest.com/') EchoNest
+              | and with their help we ran a 2 week hackathon in the music space. Besides Echonest, we used a variety of external APIs including rdio, Grooveshark, and youtube.
+          br
+          #echoNestCarousel.carousel.slide
+            ol.carousel-indicators
+              each project, p in sprint1
+                li(data-target='#echoNestCarousel', data-slide-to='#{p}')
+            .carousel-inner
+              each project, p in sprint1
+                .item
+                  a(href='#{project.link}')
+                    img.carouselImg(src='imgs/sprint1/#{project.img}')
+                  div.carousel-caption
+                    - project.members.map(function (member) { return students[member]}).forEach(function (member) {
+                      div.personImg
+                        a(href='#{member.link}')
+                          img(src='#{member.img}', width="80px")
+                    - })
+                    div.info
+                      h4
+                        | #{p.full}
+                        a(href='#{project.link}') #{project.name}
+                      p #{project.description}
+            a.carousel-control.left(href='#echoNestCarousel', data-slide='prev') &lt;
+            a.carousel-control.right(href='#echoNestCarousel', data-slide='next') &gt;
+      #panel2.row-fluid
+        .span8.offset2
+          h2 Week 4 - Mashup
+          div
+            p
+              | After we learned the basics in weeks 1 to 3, we showcased what we've learned by making mashups between 2 different services. Our work was pitted against each other and the winner got eternal glory while the rest got candy thrown at them.
+          br
+          #mashupCarousel.carousel.slide
+            ol.carousel-indicators
+              li.active(data-target='#mashupCarousel', data-slide-to='0')
+              li(data-target='#mashupCarousel', data-slide-to='1')
+            .carousel-inner
+              .active.item
+                a(href='http://thedecisionroom.herokuapp.com/')
+                  img.carouselImg(src='imgs/mashups/seger.png')
+                .carousel-caption
+                  .personImg
+                    a(href='http://github.com/mseger')
+                      img(src='https://secure.gravatar.com/avatar/828ccde1a7f0c8b5e461bf5678c10d2f?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png')
+                  .info
+                    h4
+                      | Margret-Ann Seger,
+                      a(href='http://thedecisionroom.herokuapp.com/') The Decision Room
+                    p
+                      | Mashup between tt.fm + yelp. The Decision Room helps you make plans among your Facebook friends
+              .item
+                a(href='http://afternoon-wave-2684.herokuapp.com/')
+                  img.carouselImg(src='imgs/mashups/crosby.png')
+                .carousel-caption
+                  .personImg
+                    a(href='http://github.com/reyner')
+                      img(src='https://secure.gravatar.com/avatar/7ae4ee10ed19796b1bf0585ecc5af143?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png')
+                  .info
+                    h4
+                      | Reyner Crosby,
+                      a(href='http://afternoon-wave-2684.herokuapp.com/') Goats
+                    p Mashup between tt.fm + youtube. Youtube video sharing with your friends.
+              .item
+                a(href='http://olinjs-mashup-aman.herokuapp.com/')
+                  img.carouselImg(src='imgs/mashups/kapur.png')
+                .carousel-caption
+                  .personImg
+                    a(href='http://github.com/fireblade99')
+                      img(src='https://secure.gravatar.com/avatar/83863cc427f37fe98268c4f64dc7d809?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png')
+                  .info
+                    h4
+                      | Aman Kapur,
+                      a(href='http://olinjs-mashup-aman.herokuapp.com/') Status Editor
+                    p
+                      | Mashup between typewithme + facebook. Letting multiple people edit your facebook status at once. Bringing trolling to a new level.
+              .item
+                a(href='http://salty-ridge-5175.herokuapp.com/')
+                  img.carouselImg(src='imgs/mashups/shane.png')
+                .carousel-caption
+                  .personImg
+                    a(href='http://github.com/skinc')
+                      img(width='80px', src='https://secure.gravatar.com/avatar/ff81abef60121b5aee646f7721eac874?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png')
+                  .info
+                    h4
+                      | Shane Skikne,
+                      a(href='http://salty-ridge-5175.herokuapp.com/') Do Wrk
+                    p
+                      | Mashup between Google Doc + pandora. A notebook that withholds rewards in the form of music/gifs/etc until the writing is done.
+              .item
+                a(href='http://visual-lastfm.herokuapp.com/')
+                  img.carouselImg(src='imgs/mashups/may.png')
+                .carousel-caption
+                  .personImg
+                    a(href='http://github.com/madisonmay13')
+                      img(src='https://secure.gravatar.com/avatar/3e1a7d9ccfa13aed6bc6cb7ec6892518?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png')
+                  .info
+                    h4
+                      | Madison May,
+                      a(href='http://visual-lastfm.herokuapp.com/') Visual Last.fm
+                    p
+                      | Mashup between OneReceipt + Grooveshark. Visual Last.fm lets you see what are your top songs.
+              .item
+                a(href='http://listpop.herokuapp.com/')
+                  img.carouselImg(src='imgs/mashups/redfern.png')
+                .carousel-caption
+                  .personImg
+                    a(href='http://github.com/redfern314')
+                      img(src='https://secure.gravatar.com/avatar/ee04ed0af6cc6e2cc4fe8d67ce0f8a66?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png')
+                  .info
+                    h4
+                      | Derek Redfern,
+                      a(href='http://listpop.herokuapp.com/') ListPop
+                    p
+                      | Mashup between typewithme +musicmap.herokuapp.com. ListPop lets you make playlists of the songs you love with your friends - then get recommendations for more songs to add to each list based on the last.fm API!
+              .item
+                a(href='http://boiling-beyond-2611.herokuapp.com/')
+                  img.carouselImg(src='imgs/mashups/kearney.png')
+                .carousel-caption
+                  .personImg
+                    a(href='http://github.com/dankearney')
+                      img(width='80px', src='https://secure.gravatar.com/avatar/cfdcb5890f87dc254bb99863ac7cdcdb?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png')
+                  .info
+                    h4
+                      | Daniel Kearney,
+                      a(href='http://boiling-beyond-2611.herokuapp.com/') Shekel Swap
+                    p Mashup between Bitcoin + detexify. Currency exchange.
+              .item
+                a(href='http://fetchflix.herokuapp.com/')
+                  img.carouselImg(src='imgs/mashups/chae.png')
+                .carousel-caption
+                  .personImg
+                    a(href='http://github.com/asjchae')
+                      img(width='80px', src='https://secure.gravatar.com/avatar/49a31551580bd684d58969bf04eaf1f1?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png')
+                  .info
+                    h4
+                      | Ari Chae,
+                      a(href='http://fetchflix.herokuapp.com/') Fetch Flix
+                    p Mashup between fetchnotes + Netflix. Easier movie recommendations.
+              .item
+                a(href='http://gentle-waters-8936.herokuapp.com/')
+                  img.carouselImg(src='imgs/mashups/mason.jpg')
+                .carousel-caption
+                  .personImg
+                    a(href='http://github.com/mdelrosa')
+                      img(width='80px', src='https://secure.gravatar.com/avatar/f97fc8d0b2bb88e646e6d868f44c721e?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png')
+                  .info
+                    h4
+                      | Mason del Rosario,
+                      a(href='http://gentle-waters-8936.herokuapp.com/') Square Tube
+                    p Mashup between Square + YouTube. Easier movie recommendations.
+              .item
+                a(href='http://julianablog.herokuapp.com/')
+                  img.carouselImg(src='imgs/mashups/nazare.png')
+                .carousel-caption
+                  .personImg
+                    a(href='http://github.com/JNazare')
+                      img(src='https://secure.gravatar.com/avatar/d934e24c31a10a19dc238d6a75106a32?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png')
+                  .info
+                    h4
+                      | Juliana Nazare,
+                      a(href='http://julianablog.herokuapp.com/') Square Tube
+                    p Mashup between The Useless Website + Netflix. Blogging platform.
+              .item
+                a(href='http://sheltered-crag-4327.herokuapp.com/cats/new')
+                  img.carouselImg(src='imgs/mashups/dlee.png')
+                .carousel-caption
+                  .personImg
+                    a(href='http://github.com/doyunglee')
+                      img(src='https://secure.gravatar.com/avatar/d4ad7f4022b9b86c2da92a718df3aeba?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png')
+                  .info
+                    h4
+                      | Doyung Lee,
+                      a(href='http://sheltered-crag-4327.herokuapp.com/cats/new') Cats, Germs, and Feels
+                    p
+                      | Mashup between webmd + attackofthecute.com. Ecards for when your friends are sick.
+              .item
+                a(href='http://guarded-retreat-7885.herokuapp.com/')
+                  img.carouselImg(src='imgs/mashups/sarver.png')
+                .carousel-caption
+                  .personImg
+                    a(href='http://github.com/Velociraptor')
+                      img(src='https://secure.gravatar.com/avatar/33f738a6212767e6ad2f4a6c121278f3?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png')
+                  .info
+                    h4
+                      | Hannah Sarver,
+                      a(href='http://guarded-retreat-7885.herokuapp.com/') Teux View
+                    p Mashup between teuxdeux.com + VINE. Task list using gifs.
+              .item
+                a(href='http://hidden-coast-9360.herokuapp.com/')
+                  img.carouselImg(src='imgs/mashups/langowitz.png')
+                .carousel-caption
+                  .personImg
+                    a(href='http://github.com/JLangowitz')
+                      img(width='80px', src='https://secure.gravatar.com/avatar/3b137c9085274ab651cad219797bd9f4?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png')
+                  .info
+                    h4
+                      | Joshua Langowitz,
+                      a(href='http://hidden-coast-9360.herokuapp.com/') DropTube
+                    p Mashup between Dropbox + YouTube. Sharing videos.
+              .item
+                a(href='http://pnpnotes.herokuapp.com/')
+                  img.carouselImg(src='imgs/mashups/chen.png')
+                .carousel-caption
+                  .personImg
+                    a(href='http://github.com/aeri')
+                      img(src='https://secure.gravatar.com/avatar/a040779988495fd525bafc6737722f5c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png')
+                  .info
+                    h4
+                      | Thomas Chen,
+                      a(href='http://pnpnotes.herokuapp.com/') PnP Notes
+                    p Mashup between Chegg.com + Mobee. Sharing videos.
+              .item
+                a(href='http://gentle-reaches-3926.herokuapp.com/')
+                  img.carouselImg(src='imgs/mashups/alee.png')
+                .carousel-caption
+                  .personImg
+                    a(href='http://github.com/alee123')
+                      img(width='80px', src='https://secure.gravatar.com/avatar/b5cf199dd94652ee7b9da379f9612ce2?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png')
+                  .info
+                    h4
+                      | Amanda Lee,
+                      a(href='http://gentle-reaches-3926.herokuapp.com/') Clever Notes
+                    p Mashup between Fetchnotes + Venmo. Notes for payment.
+              .item
+                a(href='http://morning-crag-3399.herokuapp.com/')
+                  img.carouselImg(src='imgs/mashups/austin.png')
+                .carousel-caption
+                  .personImg
+                    a(href='http://github.com/KaminariNoKage')
+                      img(src='https://secure.gravatar.com/avatar/5e2df34255108dbd22998c5729170d1f?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png')
+                  .info
+                    h4
+                      | Kai Austin,
+                      a(href='http://morning-crag-3399.herokuapp.com/') ViTube
+                    p Mashup between Vine + youtube.com. Custom image albums.
+              .item
+                a(href='http://infinite-sierra-8493.herokuapp.com/')
+                  img.carouselImg(src='imgs/mashups/bethune.png')
+                .carousel-caption
+                  .personImg
+                    a(href='https://github.com/jbthn')
+                      img(src='https://secure.gravatar.com/avatar/1c6003483d8880a2763c19800bca3286?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png')
+                  .info
+                    h4
+                      | Jessica Bethune,
+                      a(href='http://infinite-sierra-8493.herokuapp.com/') Newsblr
+                    p
+                      | Mashup between Vine + Tumblr. Browse RSS feeds for interesting articles and share them on your profile.
+            a.carousel-control.left(href='#mashupCarousel', data-slide='prev') &lt;
+            a.carousel-control.right(href='#mashupCarousel', data-slide='next') &gt;
+      #panel3
+        .row-fluid
+          .span8.offset2
+            h2 Weeks 1-3
+            p
+              | It started with a 3 week crash course in
+              a(href='http://nodejs.org/') Node
+              | , Javascript, and MongoDB. We started off by reading the Node Beginner Book before we launched into the Express framework. Along the way we figured out templating engines such as Jade and interacted with external APIs such as Facebook. We deployed everything we made to Heroku.
+            p
+              | We also learned some client side JS in order to spice up our sites. Bootstrap also come in handy for making everything we did look better.
+            p
+              | Here are just a few of the things we made while we learned our core skills:
+            br
+            .row-fluid(style='text-align: center;')
+              .span4
+                img.ProfileImg(style='height: 200px; margin-left: auto; margin-right: auto;', src='imgs/week3/homework4.png')
+                h4 Homework 4
+                | Making a Twitter Clone
+              .span4
+                img.ProfileImg(style='height: 200px; margin-left: auto; margin-right: auto;', src='imgs/week3/homework5.png')
+                h4 Homework 5
+                | Making a Facebook/Myspace Mashup
+              .span4
+                img.ProfileImg(style='height: 200px; margin-left: auto; margin-right: auto;', src='imgs/week3/homework6.png')
+                h4 Homework 6
+                | Making a Facebook caption roulette
+      .row-fluid(style='padding-top: 100px;')
+        .span8.offset2
+          h2 Enrolled Students
+          ul#students
+            - Object.keys(students).forEach(function (key) {
+              li
+                a(href='#{students[key].link}')
+                  b #{students[key].full} 
+                  img.ProfileImg(src='#{students[key].img}')
+            - })
+      .row-fluid(style='padding-top: 80px;')
+        .span8.offset2
+          h2 The Teaching Crew
+          .row-fluid.crew
+            .span4
+              p
+                img.ProfileImg(src='https://sphotos-a.xx.fbcdn.net/hphotos-prn1/p206x206/547858_10151166188985676_44503551_n.jpg')
+                b
+                  a(href='mailto:david.gaynor@students.olin.edu') David Gaynor
+                br
+                a(href='http://github.com/runnedrun') github/runnedrun
+                br
+                span
+                  | David Gaynor has never been on Reddit. He didn't know what Xkcd was until college.  Until his senior year of highschool he thought that Youtube was a video blogging service. Or maybe that was senior year of college. Anyway, even though he's a bit old fashioned, David still gets his code on in some pretty cool ways.  He's written test suites for tiny robots in C, rewrote the python facebook API, and has been working on the same side project for 6 months. Wow, that dedication. Or stupidity. One of the two. He's worked for Pivotal Labs and Twitter, and is going back to San Fran next fall, as a full time Tweeter. If I had to describe David in one word it would be: "strikingly similar to Tim Ryan in appearance, but only when he has long hair".
+            .span4
+              p
+                img.ProfileImg(src='http://static.tumblr.com/edy5jpt/y4fmay3to/vanity-conference')
+                b
+                  a(href='mailto:timothy.ryan@students.olin.edu') Tim Ryan
+                br
+                a(href='http://github.com/tcr') github/tcr
+                br
+                span
+                  | Tim was born, raised, and will one day die in the loving embrace of New England. He has been using the Internet since he was just four years old, sharpened his teeth on AOL webcomics and Invader Zim message boards, and made horrible abominations on Geocities using everyone's favorite language, JavaScript. Ten years later, this became the cool thing to do and Tim rocketed to Internet stardom. He's authored compilers, <canvas> shims, and trendy Lisps, developed for Intuit, PMed Microsoft, and rocked the HTML5 boat at Game Closure. He's interested in making computing more accessible to everyone, and has a penchant for APIs and platforms. Tim loves acting, vintage video games, and typography, and one day you'll find him mad, fleeing to the coast of Ireland, writing fishing novels.
+            .span4
+              p
+                img.ProfileImg(src='https://sphotos-a.xx.fbcdn.net/hphotos-ash4/403695_10150584876607784_1021260198_n.jpg')
+                b
+                  a(href='mailto:jialiya.huang@students.olin.edu') Jia Huang
+                br
+                a(href='http://github.com/jiahuang') github/jiahuang
+                br
+                span
+                  | Jia is an excellent student, which is rather impressive considering she doesn't know a word of English. She was raised in China until her parents stuffed her into a small crate and shipped her to America. Unfortunately, the crate was lost from 1998-2003 before arriving, which severely stunted the poor girl's growth. Upon being freed, Jia was baffled and scared of the outdoor environment and has since then been stuck behind a computer. Jia has worked for multiple startups, as well as Amazon, Microsoft, and Twilio, and has recently developed a strange interest in hardware. In short, Jia is pretty small, but she could probably still beat you up.
+      .row-fluid(style='padding-top: 20px; padding-bottom: 100px;')
+        .span8.offset2
+          h2 The NINJAs
+          .row-fluid.crew
+            .span4
+              p
+                img.ProfileImg(src='https://sphotos-a.xx.fbcdn.net/hphotos-snc6/p206x206/285552_2087558665789_6675257_n.jpg')
+                b
+                  a(href='mailto:wcdolphin@gmail.com') Cory Dolphin
+                br
+                a(href='http://github.com/wcdolphin') github/wcdolphin
+                br
+                span
+                  | Cory is that guy. You know, that guy who makes the design decisions. The guy who makes things look pretty. The good news is that he actually has the coding chops to back up his "design thinking".  He's been known to make some crazy stuff in Python (and Flask), has (supposedly) made a bartending robot, and spent the last 2 summers single handedly making Microsoft a cool company. In the end all you need to know about Cory is that he speaks softly, carries a big stick, and sometimes uses that stick to awkwardly type on his computer.  And he still gets a lot done.
+            .span4
+              p
+                img.ProfileImg(src='http://sphotos-b.xx.fbcdn.net/hphotos-ash4/402372_2853430369225_1990434808_n.jpg')
+                b
+                  a(href='mailto:Aaron.Greenberg@students.olin.edu') Aaron Greenberg
+                br
+                a(href='https://github.com/aaronjgreenberg') github/aaronjgreenberg
+                br
+                span
+                  | Aaron Greenberg. Champion. Womanizer. Webmaster. He is a California boy to the core, with his head stuck in the sandy beaches back west. A charmer by nature, Aaron woos women with his deep, rippling eyes and manages to mesmerize men with his crude wit. Be warned. The calm, soothing voice is just a front; Aaron is really a beast of the world, and takes names.
+            .span4
+              p
+                img.ProfileImg(src='http://sphotos-a.xx.fbcdn.net/hphotos-prn1/45534_3634723286771_309854048_n.jpg')
+                b
+                  a(href='mailto:paul.booth@students.olin.edu') Paul Booth
+                br
+                a(href='https://github.com/paulbooth') github/paulbooth
+                br
+                span
+                  | Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth Paul Booth
