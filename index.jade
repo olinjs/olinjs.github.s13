@@ -79,6 +79,12 @@ html
       #students { overflow: auto; margin: 15px 0 15px; }
       #students li { line-height: 74px; width: 300px; margin: 8px 0; float: left; }
       #students img { width: 64px; display: block; vertical-align: center; float: left; margin-right: 15px; }
+      .fb-like{
+        vertical-align: top;
+      }
+      #banner{
+        margin-bottom:10px
+      }
     script(type='text/javascript')
       $(document).ready(function(){
         $('#mashupCarousel').carousel({
@@ -108,18 +114,18 @@ html
               js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=236983706410158";
               fjs.parentNode.insertBefore(js, fjs);
               }(document, 'script', 'facebook-jssdk'));
-            h2
+            h2(id="banner")
               | A class on programming and web development at Olin College, Spring 2013. (
               a(href='https://github.com/olinjs') Github Repo
               | )
+            .fb-like(data-href='http://olinjs.github.com/', data-send='false', data-layout='button_count', data-width='450', data-show-faces='true')
+            a(href="http://twitter.com/share", class="twitter-share-button", data-url="http://olinjs.github.com", data-count="horizontal") Tweet
+            script(src="http://platform.twitter.com/widgets.js")
             p(style='margin: 0 0;')
               | Meets Tuesdays/Fridays 3:20&mdash;5:00 in the Crescent Room. (
               a(href='class.ics') Download an iCal
               | )
             br
-            .fb-like(data-href='http://olinjs.github.com/', data-send='false', data-layout='button_count', data-width='450', data-show-faces='true')
-            a(href="http://twitter.com/share", class="twitter-share-button", data-url="http://olinjs.github.com", data-count="horizontal") Tweet
-            script(src="http://platform.twitter.com/widgets.js")
             ul
               li
                 | Build legit web apps from the ground up. Apps which will make your resume burn bright with ethereal flame.
