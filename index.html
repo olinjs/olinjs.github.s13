@@ -64,11 +64,21 @@
       }
       
       #logo { float: left; margin-left: -280px; }
-      .ProfileImg { border: 5px solid #59f; display: block;
-      -webkit-transition: border-color linear 0.25s; -moz-transition: border-color linear 0.25s; }
+      .ProfileImg {
+        border: 5px solid #59f; display: block;
+        -webkit-transition: border-color linear 0.25s; 
+        -moz-transition: border-color linear 0.25s; 
+        -o-transition: border-color linear 0.25s; 
+        -ms-transition: border-color linear 0.25s; 
+      }
       img:hover { border-color: #fff; }
       h2 { font-weight: normal; font-size: 30px; margin-bottom: 30px; }
-      h2, h3, p, li { -webkit-transition: color linear 0.1s; -moz-transition: color linear 0.1s; }
+      h2, h3, p, li { 
+        -webkit-transition: color linear 0.1s; 
+        -moz-transition: color linear 0.1s; 
+        -ms-transition: color linear 0.1s;
+        -o-transition: color linear 0.1s;  
+      }
       li { margin-bottom: 5px; }
       h3 { margin: 30px 0 0; }
       .crew img { height: 200px; margin: 0 auto 10px; }
@@ -106,7 +116,7 @@
     <div class="container">
       <div id="panel1">
         <div class="row-fluid">
-          <div class="span6 offset4"><a href="https://github.com/olinjs"><img id="logo" src="logo-trans.png" width="250" style="margin-top: 15px;" class="ProfileImg"></a>
+          <div class="span6 offset4"><a href="https://github.com/olinjs" style="display:block;"><img id="logo" src="logo-trans.png" width="250" style="margin-top: 15px; width:250px; height:250px;" class="ProfileImg"></a>
             <div id="fb-root"></div>
             <script>
               (function(d, s, id) {
@@ -186,8 +196,8 @@
             <div class="carousel-inner">
               <div class="item"><a href="http://playlist-maker.herokuapp.com"><img src="imgs/sprint1/playlistgen.png" class="carouselImg"></a>
                 <div class="carousel-caption">
-                  <div class="personImg"><a href="http://github.com/jbthn"><img src="https://secure.gravatar.com/avatar/1c6003483d8880a2763c19800bca3286?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80px"></a></div>
-                  <div class="personImg"><a href="http://github.com/JNazare"><img src="https://secure.gravatar.com/avatar/d934e24c31a10a19dc238d6a75106a32?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80px"></a></div>
+                  <div class="personImg"><a href="http://github.com/jbthn"><img src="https://secure.gravatar.com/avatar/1c6003483d8880a2763c19800bca3286?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80" alt="placeholder"></a></div>
+                  <div class="personImg"><a href="http://github.com/JNazare"><img src="https://secure.gravatar.com/avatar/d934e24c31a10a19dc238d6a75106a32?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80" alt="placeholder"></a></div>
                   <div class="info">
                     <h4><a href="http://playlist-maker.herokuapp.com">J^2</a></h4>
                     <p>Generates a playlist based on certain criteria</p>
@@ -196,7 +206,7 @@
               </div>
               <div class="item"><a href="http://songhero.herokuapp.com"><img src="imgs/sprint1/songhero.png" class="carouselImg"></a>
                 <div class="carousel-caption">
-                  <div class="personImg"><a href="http://github.com/newmu"><img src="https://secure.gravatar.com/avatar/691552eea2f4352c7d5e948f0aff0a52?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80px"></a></div>
+                  <div class="personImg"><a href="http://github.com/newmu"><img src="https://secure.gravatar.com/avatar/691552eea2f4352c7d5e948f0aff0a52?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80" alt="placeholder"></a></div>
                   <div class="info">
                     <h4><a href="http://songhero.herokuapp.com">Song Hero</a></h4>
                     <p>Guitar Hero automatically</p>
@@ -205,9 +215,9 @@
               </div>
               <div class="item"><a href="http://coplay.herokuapp.com"><img src="imgs/sprint1/coplay.png" class="carouselImg"></a>
                 <div class="carousel-caption">
-                  <div class="personImg"><a href="http://github.com/redfern314"><img src="https://secure.gravatar.com/avatar/ee04ed0af6cc6e2cc4fe8d67ce0f8a66?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80px"></a></div>
-                  <div class="personImg"><a href="http://github.com/madisonmay13"><img src="https://secure.gravatar.com/avatar/3e1a7d9ccfa13aed6bc6cb7ec6892518?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80px"></a></div>
-                  <div class="personImg"><a href="http://github.com/aeri"><img src="https://secure.gravatar.com/avatar/a040779988495fd525bafc6737722f5c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80px"></a></div>
+                  <div class="personImg"><a href="http://github.com/redfern314"><img src="https://secure.gravatar.com/avatar/ee04ed0af6cc6e2cc4fe8d67ce0f8a66?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80" alt="placeholder"></a></div>
+                  <div class="personImg"><a href="http://github.com/madisonmay13"><img src="https://secure.gravatar.com/avatar/3e1a7d9ccfa13aed6bc6cb7ec6892518?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80" alt="placeholder"></a></div>
+                  <div class="personImg"><a href="http://github.com/aeri"><img src="https://secure.gravatar.com/avatar/a040779988495fd525bafc6737722f5c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80" alt="placeholder"></a></div>
                   <div class="info">
                     <h4><a href="http://coplay.herokuapp.com">CoPlay</a></h4>
                     <p>Cooperative music at its finest.</p>
@@ -216,9 +226,9 @@
               </div>
               <div class="item"><a href="http://powerful-ridge-3498.herokuapp.com"><img src="imgs/sprint1/arcReactor.jpg" class="carouselImg"></a>
                 <div class="carousel-caption">
-                  <div class="personImg"><a href="http://github.com/JLangowitz"><img src="https://secure.gravatar.com/avatar/3b137c9085274ab651cad219797bd9f4?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80px"></a></div>
-                  <div class="personImg"><a href="http://github.com/doyunglee"><img src="https://secure.gravatar.com/avatar/d4ad7f4022b9b86c2da92a718df3aeba?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80px"></a></div>
-                  <div class="personImg"><a href="http://github.com/mdelrosa"><img src="https://secure.gravatar.com/avatar/f97fc8d0b2bb88e646e6d868f44c721e?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80px"></a></div>
+                  <div class="personImg"><a href="http://github.com/JLangowitz"><img src="https://secure.gravatar.com/avatar/3b137c9085274ab651cad219797bd9f4?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80" alt="placeholder"></a></div>
+                  <div class="personImg"><a href="http://github.com/doyunglee"><img src="https://secure.gravatar.com/avatar/d4ad7f4022b9b86c2da92a718df3aeba?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80" alt="placeholder"></a></div>
+                  <div class="personImg"><a href="http://github.com/mdelrosa"><img src="https://secure.gravatar.com/avatar/f97fc8d0b2bb88e646e6d868f44c721e?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80" alt="placeholder"></a></div>
                   <div class="info">
                     <h4><a href="http://powerful-ridge-3498.herokuapp.com">Arc Reactor</a></h4>
                     <p>An infinite jukebox with user selected songs</p>
@@ -227,8 +237,8 @@
               </div>
               <div class="item"><a href="http://whispering-crag-3372.herokuapp.com"><img src="imgs/sprint1/dinofy.jpg" class="carouselImg"></a>
                 <div class="carousel-caption">
-                  <div class="personImg"><a href="http://github.com/Velociraptor"><img src="https://secure.gravatar.com/avatar/33f738a6212767e6ad2f4a6c121278f3?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80px"></a></div>
-                  <div class="personImg"><a href="http://github.com/mkorpusik"><img src="https://secure.gravatar.com/avatar/a828843e6c8f86eeecc1e86805934942?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80px"></a></div>
+                  <div class="personImg"><a href="http://github.com/Velociraptor"><img src="https://secure.gravatar.com/avatar/33f738a6212767e6ad2f4a6c121278f3?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80" alt="placeholder"></a></div>
+                  <div class="personImg"><a href="http://github.com/mkorpusik"><img src="https://secure.gravatar.com/avatar/a828843e6c8f86eeecc1e86805934942?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80" alt="placeholder"></a></div>
                   <div class="info">
                     <h4><a href="http://whispering-crag-3372.herokuapp.com">Dinofy</a></h4>
                     <p>Forget goats, dinosaurs are way cooler.</p>
@@ -237,7 +247,7 @@
               </div>
               <div class="item"><a href="http://lyricswap.herokuapp.com"><img src="imgs/sprint1/lyricswap.png" class="carouselImg"></a>
                 <div class="carousel-caption">
-                  <div class="personImg"><a href="http://github.com/KaminariNoKage"><img src="https://secure.gravatar.com/avatar/5e2df34255108dbd22998c5729170d1f?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80px"></a></div>
+                  <div class="personImg"><a href="http://github.com/KaminariNoKage"><img src="https://secure.gravatar.com/avatar/5e2df34255108dbd22998c5729170d1f?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80" alt="placeholder"></a></div>
                   <div class="info">
                     <h4><a href="http://lyricswap.herokuapp.com">Lyric Swap</a></h4>
                     <p>Search for songs by highlighting text in displayed lyrics.</p>
@@ -246,9 +256,9 @@
               </div>
               <div class="item"><a href="http://acapellizer.herokuapp.com"><img src="imgs/sprint1/acapella.png" class="carouselImg"></a>
                 <div class="carousel-caption">
-                  <div class="personImg"><a href="http://github.com/mseger"><img src="https://secure.gravatar.com/avatar/828ccde1a7f0c8b5e461bf5678c10d2f?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80px"></a></div>
-                  <div class="personImg"><a href="http://github.com/reyner"><img src="https://secure.gravatar.com/avatar/7ae4ee10ed19796b1bf0585ecc5af143?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80px"></a></div>
-                  <div class="personImg"><a href="http://github.com/fireblade99"><img src="https://secure.gravatar.com/avatar/83863cc427f37fe98268c4f64dc7d809?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80px"></a></div>
+                  <div class="personImg"><a href="http://github.com/mseger"><img src="https://secure.gravatar.com/avatar/828ccde1a7f0c8b5e461bf5678c10d2f?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80" alt="placeholder"></a></div>
+                  <div class="personImg"><a href="http://github.com/reyner"><img src="https://secure.gravatar.com/avatar/7ae4ee10ed19796b1bf0585ecc5af143?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80" alt="placeholder"></a></div>
+                  <div class="personImg"><a href="http://github.com/fireblade99"><img src="https://secure.gravatar.com/avatar/83863cc427f37fe98268c4f64dc7d809?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80" alt="placeholder"></a></div>
                   <div class="info">
                     <h4><a href="http://acapellizer.herokuapp.com">Acapellizer</a></h4>
                     <p>Select a song, we acapella-ize it. Heavenly voices abound...almost.</p>
@@ -257,9 +267,9 @@
               </div>
               <div class="item"><a href="http://stark-meadow-6537.herokuapp.com"><img src="imgs/sprint1/goatify.png" class="carouselImg"></a>
                 <div class="carousel-caption">
-                  <div class="personImg"><a href="http://github.com/TheoT"><img src="https://secure.gravatar.com/avatar/1213cd2279dfcde061cac550b560a923?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80px"></a></div>
-                  <div class="personImg"><a href="http://github.com/dankearney"><img src="https://secure.gravatar.com/avatar/cfdcb5890f87dc254bb99863ac7cdcdb?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80px"></a></div>
-                  <div class="personImg"><a href="http://github.com/abekim"><img src="https://secure.gravatar.com/avatar/0fa724a5dc487a85bdaeb541ac53c67d?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80px"></a></div>
+                  <div class="personImg"><a href="http://github.com/TheoT"><img src="https://secure.gravatar.com/avatar/1213cd2279dfcde061cac550b560a923?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80" alt="placeholder"></a></div>
+                  <div class="personImg"><a href="http://github.com/dankearney"><img src="https://secure.gravatar.com/avatar/cfdcb5890f87dc254bb99863ac7cdcdb?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80" alt="placeholder"></a></div>
+                  <div class="personImg"><a href="http://github.com/abekim"><img src="https://secure.gravatar.com/avatar/0fa724a5dc487a85bdaeb541ac53c67d?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80" alt="placeholder"></a></div>
                   <div class="info">
                     <h4><a href="http://stark-meadow-6537.herokuapp.com">Goats</a></h4>
                     <p>Add a goat video into any YouTube video at the moment that maximizes hilarity.</p>
@@ -268,8 +278,8 @@
               </div>
               <div class="item"><a href="http://oneflewovertheechonest.herokuapp.com"><img src="imgs/sprint1/Oneflewovertheechonest.png" class="carouselImg"></a>
                 <div class="carousel-caption">
-                  <div class="personImg"><a href="http://github.com/asjchae"><img src="https://secure.gravatar.com/avatar/49a31551580bd684d58969bf04eaf1f1?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80px"></a></div>
-                  <div class="personImg"><a href="http://github.com/skinc"><img src="https://secure.gravatar.com/avatar/ff81abef60121b5aee646f7721eac874?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80px"></a></div>
+                  <div class="personImg"><a href="http://github.com/asjchae"><img src="https://secure.gravatar.com/avatar/49a31551580bd684d58969bf04eaf1f1?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80" alt="placeholder"></a></div>
+                  <div class="personImg"><a href="http://github.com/skinc"><img src="https://secure.gravatar.com/avatar/ff81abef60121b5aee646f7721eac874?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80" alt="placeholder"></a></div>
                   <div class="info">
                     <h4><a href="http://oneflewovertheechonest.herokuapp.com">One Flew Over the Echo Nest</a></h4>
                     <p>Multiplayer game: Apples to Apples, with songs!</p>
@@ -278,8 +288,8 @@
               </div>
               <div class="item"><a href="http://immense-coast-9469.herokuapp.com"><img src="imgs/sprint1/mixitup.png" class="carouselImg"></a>
                 <div class="carousel-caption">
-                  <div class="personImg"><a href="http://github.com/alee123"><img src="https://secure.gravatar.com/avatar/b5cf199dd94652ee7b9da379f9612ce2?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80px"></a></div>
-                  <div class="personImg"><a href="http://github.com/rmathew1992"><img src="https://secure.gravatar.com/avatar/adb7e73cd67e45b1459b0ad32b3237ee?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80px"></a></div>
+                  <div class="personImg"><a href="http://github.com/alee123"><img src="https://secure.gravatar.com/avatar/b5cf199dd94652ee7b9da379f9612ce2?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80" alt="placeholder"></a></div>
+                  <div class="personImg"><a href="http://github.com/rmathew1992"><img src="https://secure.gravatar.com/avatar/adb7e73cd67e45b1459b0ad32b3237ee?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="80" alt="placeholder"></a></div>
                   <div class="info">
                     <h4><a href="http://immense-coast-9469.herokuapp.com">Amandamore and Rachel Lewis</a></h4>
                     <p>Mix and match multiple music genres.</p>
@@ -331,7 +341,7 @@
               </div>
               <div class="item"><a href="http://salty-ridge-5175.herokuapp.com/"><img src="imgs/mashups/shane.png" class="carouselImg"></a>
                 <div class="carousel-caption">
-                  <div class="personImg"><a href="http://github.com/skinc"><img width="80px" src="https://secure.gravatar.com/avatar/ff81abef60121b5aee646f7721eac874?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></div>
+                  <div class="personImg"><a href="http://github.com/skinc"><img width="80" src="https://secure.gravatar.com/avatar/ff81abef60121b5aee646f7721eac874?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></div>
                   <div class="info">
                     <h4>Shane Skikne,<a href="http://salty-ridge-5175.herokuapp.com/">Do Wrk</a></h4>
                     <p>Mashup between Google Doc + pandora. A notebook that withholds rewards in the form of music/gifs/etc until the writing is done.</p>
@@ -358,7 +368,7 @@
               </div>
               <div class="item"><a href="http://boiling-beyond-2611.herokuapp.com/"><img src="imgs/mashups/kearney.png" class="carouselImg"></a>
                 <div class="carousel-caption">
-                  <div class="personImg"><a href="http://github.com/dankearney"><img width="80px" src="https://secure.gravatar.com/avatar/cfdcb5890f87dc254bb99863ac7cdcdb?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></div>
+                  <div class="personImg"><a href="http://github.com/dankearney"><img width="80" src="https://secure.gravatar.com/avatar/cfdcb5890f87dc254bb99863ac7cdcdb?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></div>
                   <div class="info">
                     <h4>Daniel Kearney,<a href="http://boiling-beyond-2611.herokuapp.com/">Shekel Swap</a></h4>
                     <p>Mashup between Bitcoin + detexify. Currency exchange.</p>
@@ -367,7 +377,7 @@
               </div>
               <div class="item"><a href="http://fetchflix.herokuapp.com/"><img src="imgs/mashups/chae.png" class="carouselImg"></a>
                 <div class="carousel-caption">
-                  <div class="personImg"><a href="http://github.com/asjchae"><img width="80px" src="https://secure.gravatar.com/avatar/49a31551580bd684d58969bf04eaf1f1?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></div>
+                  <div class="personImg"><a href="http://github.com/asjchae"><img width="80" src="https://secure.gravatar.com/avatar/49a31551580bd684d58969bf04eaf1f1?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></div>
                   <div class="info">
                     <h4>Ari Chae,<a href="http://fetchflix.herokuapp.com/">Fetch Flix</a></h4>
                     <p>Mashup between fetchnotes + Netflix. Easier movie recommendations.</p>
@@ -376,7 +386,7 @@
               </div>
               <div class="item"><a href="http://gentle-waters-8936.herokuapp.com/"><img src="imgs/mashups/mason.jpg" class="carouselImg"></a>
                 <div class="carousel-caption">
-                  <div class="personImg"><a href="http://github.com/mdelrosa"><img width="80px" src="https://secure.gravatar.com/avatar/f97fc8d0b2bb88e646e6d868f44c721e?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></div>
+                  <div class="personImg"><a href="http://github.com/mdelrosa"><img width="80" src="https://secure.gravatar.com/avatar/f97fc8d0b2bb88e646e6d868f44c721e?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></div>
                   <div class="info">
                     <h4>Mason del Rosario,<a href="http://gentle-waters-8936.herokuapp.com/">Square Tube</a></h4>
                     <p>Mashup between Square + YouTube. Easier movie recommendations.</p>
@@ -412,7 +422,7 @@
               </div>
               <div class="item"><a href="http://hidden-coast-9360.herokuapp.com/"><img src="imgs/mashups/langowitz.png" class="carouselImg"></a>
                 <div class="carousel-caption">
-                  <div class="personImg"><a href="http://github.com/JLangowitz"><img width="80px" src="https://secure.gravatar.com/avatar/3b137c9085274ab651cad219797bd9f4?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></div>
+                  <div class="personImg"><a href="http://github.com/JLangowitz"><img width="80" src="https://secure.gravatar.com/avatar/3b137c9085274ab651cad219797bd9f4?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></div>
                   <div class="info">
                     <h4>Joshua Langowitz,<a href="http://hidden-coast-9360.herokuapp.com/">DropTube</a></h4>
                     <p>Mashup between Dropbox + YouTube. Sharing videos.</p>
@@ -430,7 +440,7 @@
               </div>
               <div class="item"><a href="http://gentle-reaches-3926.herokuapp.com/"><img src="imgs/mashups/alee.png" class="carouselImg"></a>
                 <div class="carousel-caption">
-                  <div class="personImg"><a href="http://github.com/alee123"><img width="80px" src="https://secure.gravatar.com/avatar/b5cf199dd94652ee7b9da379f9612ce2?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></div>
+                  <div class="personImg"><a href="http://github.com/alee123"><img width="80" src="https://secure.gravatar.com/avatar/b5cf199dd94652ee7b9da379f9612ce2?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a></div>
                   <div class="info">
                     <h4>Amanda Lee,<a href="http://gentle-reaches-3926.herokuapp.com/">Clever Notes</a></h4>
                     <p>Mashup between Fetchnotes + Venmo. Notes for payment.</p>
