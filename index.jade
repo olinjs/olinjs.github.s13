@@ -39,6 +39,11 @@ html
       padding-bottom: 100px;
       background-color: #008110;
       }
+      #panel5 {
+      padding-top: 100px;
+      padding-bottom: 100px;
+      background-color: rgb(84, 9, 153);
+      }
       .personImg {
       float: left;
       padding-right:10px;
@@ -87,10 +92,15 @@ html
         $('#echoNestCarousel').carousel({
           interval: 5000 // in milliseconds
         });
+        $('#blueFinCarousel').carousel({
+          interval: 5000 // in milliseconds
+        });
         // add active to first list items
         $($('#echoNestCarousel .item:first')[0]).addClass("active");
         $($('#echoNestCarousel li:first')[0]).addClass("active");
 
+        $($('#blueFinCarousel .item:first')[0]).addClass("active");
+        $($('#blueFinCarousel li:first')[0]).addClass("active");
       });
   body
     .container
@@ -169,13 +179,44 @@ html
             div
               a(href='https://bluefinlabs.com/')
                 img(src='imgs/sponsors/bluefin.png')
+      #panel5.row-fluid
+        .span8.offset2
+          h2 Weeks 7 & 8 - Bluefin/Twitter Sprint
+          div
+            p
+              | We brought in
+              a(href='https://bluefinlabs.com/')&nbsp;BlueFin labs&nbsp;
+              | and with their help we ran a 2 week hackathon in the social media space. The projects for this sprint focused on product viability.
+          br
+          #blueFinCarousel.carousel.slide
+            ol.carousel-indicators
+              each project, p in sprint2
+                li(data-target='#blueFinCarousel', data-slide-to='#{p}')
+            .carousel-inner
+              each project, p in sprint2
+                .item
+                  a(href='#{project.link}')
+                    img.carouselImg(src='imgs/sprint2/#{project.img}')
+                  div.carousel-caption
+                    - project.members.map(function (member) { return students[member]}).forEach(function (member) {
+                      div.personImg
+                        a(href='#{member.link}')
+                          img(src='#{member.img}', width="80px")
+                    - })
+                    div.info
+                      h4
+                        | #{p.full}
+                        a(href='#{project.link}') #{project.name}
+                      p #{project.description}
+            a.carousel-control.left(href='#blueFinCarousel', data-slide='prev') &lt;
+            a.carousel-control.right(href='#blueFinCarousel', data-slide='next') &gt;
       #panel4.row-fluid
         .span8.offset2
           h2 Weeks 5 & 6 - EchoNest Sprint
           div
             p
               | We brought in
-              a(href='http://the.echonest.com/') EchoNest
+              a(href='http://the.echonest.com/')&nbsp;EchoNest&nbsp;
               | and with their help we ran a 2 week hackathon in the music space. Besides Echonest, we used a variety of external APIs including rdio, Grooveshark, and youtube.
           br
           #echoNestCarousel.carousel.slide
