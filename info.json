@@ -174,5 +174,34 @@
     , "img" : "mixitup.png"
     , "description" : "Mix and match multiple music genres."
     }
+  ]
+  ,
+  "sprint2" : [ 
+    { "name": "Insider Opinion"
+    , "members" : ["Dan", "Derek", "Reyner"]
+    , "link": "http://insideropinion.herokuapp.com" 
+    , "img" : "insideropinion.png"
+    , "description" : "Gets the local information tweeted about highly ranked Yelp locations"
+    }, { "name": "Superconductors"
+    , "members" : ["Margaret", "Keely", "Juliana"]
+    , "link": "http://frozen-caverns-4550.herokuapp.com/" 
+    , "img" : "superconductors.png"
+    , "description" : "Brand marketing through targeted tweets. This app helps marketers figure out who to target to spread their products visibility and influence"
+    }, { "name": "Which T^Watch"
+    , "members" : ["Margaret", "Keely", "Juliana"]
+    , "link": "http://fierce-basin-2383.herokuapp.com/" 
+    , "img" : "which_twatch.png"
+    , "description" : "Movie recommendations based on tweeted keywords"
+    }, { "name": "TechWing"
+    , "members" : ["Ari", "Doyung", "Rachel"]
+    , "link": "http://techwing.herokuapp.com" 
+    , "img" : "techwing.png"
+    , "description" : "View the latest tech news and see a livestream of commentary as well"
+    }, { "name": "YourImpact"
+    , "members" : ["Aman", "Abe", "Theo"]
+    , "link": "http://yourimpact.herokuapp.com/" 
+    , "img" : "yourimpact.png"
+    , "description" : "Shows sentiment on twitter before and after you post a tweet sharing an article/blog/video or anything else"
+    }
   ] 
 }
