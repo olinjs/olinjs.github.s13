@@ -238,7 +238,7 @@
     }, { "name": "Social Savior"
     , "members" : ["Dan", "Aman"]
     , "link": "https://github.com/fireblade99/socialsavior" 
-    , "img" : "socialsavior.jpg"
+    , "img" : "socialsavior.png"
     , "description" : "Texts your friends to rescue you when you go on a blacklisted website."
     }
   ] 

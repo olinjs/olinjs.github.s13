@@ -47,7 +47,7 @@ html
       #panel6 {
       padding-top: 100px;
       padding-bottom: 100px;
-      background-color: rgb(84, 9, 153);
+      background-color: #099999;
       }
       .personImg {
       float: left;
@@ -199,13 +199,17 @@ html
             div
               a(href='https://bluefinlabs.com/')
                 img(src='imgs/sponsors/bluefin.png')
-      
+          .span2(style="height:70px")
+            div
+              a(href='http://www.revv.me/')
+                img(src='imgs/sponsors/revv.jpg')
       #panel6.row-fluid
         .span8.offset2
           h2 Weeks 9 & 10 - Revv Sprint
           div
             p
-              | We brought in Revv, a new startup, 
+              | We brought in
+              a(href="http://www.revv.me/")&nbsp;Revv&nbsp; 
               | and with their help we ran a 2 week hackathon in the space of self-improvement. The projects for this sprint focused on both product viability and technical functionality.
           br
           #revvCarousel.carousel.slide
@@ -216,7 +220,7 @@ html
               each project, p in sprint3
                 .item
                   a(href='#{project.link}')
-                    img.carouselImg(src='imgs/sprint2/#{project.img}')
+                    img.carouselImg(src='imgs/sprint3/#{project.img}')
                   div.carousel-caption
                     - project.members.map(function (member) { return students[member]}).forEach(function (member) {
                       div.personImg
