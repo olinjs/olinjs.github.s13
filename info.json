@@ -188,7 +188,7 @@
     , "img" : "superconductors.png"
     , "description" : "Brand marketing through targeted tweets. This app helps marketers figure out who to target to spread their products visibility and influence"
     }, { "name": "Which T^Watch"
-    , "members" : ["Margaret", "Keely", "Juliana"]
+    , "members" : ["Hannah", "Josh", "Tom"]
     , "link": "http://fierce-basin-2383.herokuapp.com/" 
     , "img" : "which_twatch.png"
     , "description" : "Movie recommendations based on tweeted keywords"
@@ -202,6 +202,44 @@
     , "link": "http://yourimpact.herokuapp.com/" 
     , "img" : "yourimpact.png"
     , "description" : "Shows sentiment on twitter before and after you post a tweet sharing an article/blog/video or anything else"
+    }
+  ]
+  , "sprint3" : [
+    { "name": "Prolix"
+    , "members" : ["Derek", "Shane", "Theo"]
+    , "link": "http://prolix.herokuapp.com" 
+    , "img" : "prolix.png"
+    , "description" : "Suggests more sophisticated replacements for common words (especially adjectives) that you've typed, with the goal of helping you to increase your vocabulary and become more erudite."
+    }, { "name": "MakeIt | BreakIt"
+    , "members" : ["Doyung", "Kai", "Amanda"]
+    , "link": "http://safe-temple-3413.herokuapp.com" 
+    , "img" : "makeit.jpg"
+    , "description" : "Allows you to bet against your future-self to motive yourself to finish a goal. You can do this with friends or strangers who want to complete the same goal."
+    }, { "name": "Take5"
+    , "members" : ["Ari", "Madison", "Josh"]
+    , "link": "http://take5.herokuapp.com" 
+    , "img" : "take5.jpg"
+    , "description" : "Structured 5 minute breaks to strengthen your work ethic and improve your life."
+    }, { "name": "MailMS"
+    , "members" : ["Juliana", "Abe", "Reyner"]
+    , "link": "http://mailms.herokuapp.com" 
+    , "img" : "mailms.jpg"
+    , "description" : "SMSes you with new emails!"
+    }, { "name": "GoalPlanner"
+    , "members" : ["Mandy", "Rachel"]
+    , "link": "http://stormy-citadel-5936.herokuapp.com" 
+    , "img" : "goalplanner.png"
+    , "description" : "Schedules long-term goals (preset or custom) and displays the tasks associated with each goal on a calendar."
+    }, { "name": "Habit Fence"
+    , "members" : ["Margaret", "Graham"]
+    , "link": "http://young-savannah-1315.herokuapp.com" 
+    , "img" : "habitfence.jpg"
+    , "description" : "For every time you do your bad habit, drag a nail onto that goal's fence post. If you don't do your bad habit for a whole day, remove a nail!"
+    }, { "name": "Social Savior"
+    , "members" : ["Dan", "Aman"]
+    , "link": "https://github.com/fireblade99/socialsavior" 
+    , "img" : "socialsavior.jpg"
+    , "description" : "Texts your friends to rescue you when you go on a blacklisted website."
     }
   ] 
 }
