@@ -1,6 +1,6 @@
 # OlinJS.github.com
 
-The website for the class [http://olinjs.github.com](http://olinjs.github.com)
+The website for the class [http://olinjs.github.com/olinjs.github.s13](http://olinjs.github.com/olinjs.github.s13)
 
 ## Updating the site
 
